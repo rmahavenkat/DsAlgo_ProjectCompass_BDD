@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>20/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>92/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 14 22:07:47 EDT 2025</td>
+<td>Started on:</td><td>Tue Apr 15 09:19:20 CDT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23451 ms)</td>
+<tr><td>Total time:</td><td>81 seconds (81916 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,68 +77,36 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for invalid password field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=135.0.7049.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f64599b91c778f8f4a146510953a7d0, getElementText {id=f.356BEAC4C025B93BCBBB1316D257BD90.d.EB1B5A092B3BE6109DACB0791914E4A8.e.51}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\17046\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61859}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61859/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (6f64599b91c778f8f4a146510953a7d0)] -&gt; xpath: //*[@class=&apos;alert alert-primary&apos;]]
-Session ID: 6f64599b91c778f8f4a146510953a7d0
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy33.getText(Unknown Source)
-	at ds_Algo_PageFactory.Register_PF.ErrorMessage(Register_PF.java:89)
-	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_password(Register_SD.java:129)
-	at ✽.The user is not able to see error msg after entering invalid password(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:44)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1976224574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1976224574'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=135.0.7049.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f64599b91c778f8f4a146510953a7d0, getElementText {id=f.356BEAC4C025B93BCBBB1316D257BD90.d.EB1B5A092B3BE6109DACB0791914E4A8.e.51}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\17046\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61859}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61859/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (6f64599b91c778f8f4a146510953a7d0)] -&gt; xpath: //*[@class=&apos;alert alert-primary&apos;]]
-Session ID: 6f64599b91c778f8f4a146510953a7d0
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy33.getText(Unknown Source)
-	at ds_Algo_PageFactory.Register_PF.ErrorMessage(Register_PF.java:89)
-	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_password(Register_SD.java:129)
-	at ✽.The user is not able to see error msg after entering invalid password(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:44)
+<td><div><pre>java.lang.AssertionError: expected [Invalid password] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
+	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_password(Register_SD.java:127)
+	at ✽.The user is not able to see error msg after entering invalid password(file:///C:/DSALgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:44)
+</pre></div><a href='#' onClick='toggleBox("stack-trace822110837", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace822110837'><pre>java.lang.AssertionError: expected [Invalid password] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
+	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_password(Register_SD.java:127)
+	at ✽.The user is not able to see error msg after entering invalid password(file:///C:/DSALgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:44)
 </pre></div></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 <tr>
 <td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for invalid username field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
 <td><div><pre>java.lang.AssertionError: expected [Invalid username] but found [password_mismatch:The two password fields didn’t match.]
@@ -152,10 +120,10 @@ Session ID: 6f64599b91c778f8f4a146510953a7d0
 	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
 	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
 	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_data(Register_SD.java:112)
-	at ✽.The user is not able to see error msg after entering invalid data(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:37)
-</pre></div><a href='#' onClick='toggleBox("stack-trace240259175", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace240259175'><pre>java.lang.AssertionError: expected [Invalid username] but found [password_mismatch:The two password fields didn’t match.]
+	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_data(Register_SD.java:107)
+	at ✽.The user is not able to see error msg after entering invalid data(file:///C:/DSALgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1756570762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1756570762'><pre>java.lang.AssertionError: expected [Invalid username] but found [password_mismatch:The two password fields didn’t match.]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -166,75 +134,11 @@ Session ID: 6f64599b91c778f8f4a146510953a7d0
 	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
 	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
 	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_data(Register_SD.java:112)
-	at ✽.The user is not able to see error msg after entering invalid data(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:37)
+	at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_data(Register_SD.java:107)
+	at ✽.The user is not able to see error msg after entering invalid data(file:///C:/DSALgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:37)
 </pre></div></td>
 <td>1</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Home page for an user without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td><div><pre>java.lang.AssertionError: expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
-	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
-	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
-	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-	at dsAlgo_stepDefinition.Home_SD.the_user_is_on_the_ds_algo_portal(Home_SD.java:44)
-	at ✽.The user is on the DS Algo Portal(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD01_Home.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1267168782", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1267168782'><pre>java.lang.AssertionError: expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
-	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
-	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
-	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-	at dsAlgo_stepDefinition.Home_SD.the_user_is_on_the_ds_algo_portal(Home_SD.java:44)
-	at ✽.The user is on the DS Algo Portal(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD01_Home.feature:10)
-</pre></div></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to open the dsAlgo Portal", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td><div><pre>java.lang.AssertionError: expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
-	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
-	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
-	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-	at dsAlgo_stepDefinition.Home_SD.the_user_should_be_able_to_land_on_ds_algo_portal_with_get_started_button(Home_SD.java:35)
-	at ✽.The user should be able to land on dsAlgo portal with Get Started button(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD01_Home.feature:7)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1840457976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1840457976'><pre>java.lang.AssertionError: expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
-	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
-	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
-	at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-	at dsAlgo_stepDefinition.Home_SD.the_user_should_be_able_to_land_on_ds_algo_portal_with_get_started_button(Home_SD.java:35)
-	at ✽.The user should be able to land on dsAlgo portal with Get Started button(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD01_Home.feature:7)
-</pre></div></td>
-<td>1</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -245,105 +149,465 @@ Session ID: 6f64599b91c778f8f4a146510953a7d0
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Tree" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
 <td></td>
 <td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code for "Graph" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 <tr>
 <td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Graph" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
 <td></td>
 <td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Tree" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for all empty fields during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land on Homepage after registration with valid fields", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td></td>
-<td>2</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Array" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land on Register Page", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land in login page", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Linked List" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Stack" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Stack" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for mismatched Password and Password Confirmation field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Queue" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Linked List" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for empty Password Confirmation field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
-<tr>
-<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Queue" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
-<td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 <tr>
 <td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Data Structures-Introduction" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
 <td></td>
 <td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code for "Graph Representations" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code for "Graph Representations" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for all empty fields during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Deletion" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to navigate the practice question page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Stack" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code for "Graph" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Linked List" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to land on Home page after entering valid Username and Password fields", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Stack" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Introduction" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 <tr>
 <td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for empty Password field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
 <td></td>
-<td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>2</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 <tr>
 <td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Arrays" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
 <td></td>
 <td>0</td>
-<td>dsAlgo_Runner.TestRunner@1613674b</td></tr>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "creating Linked List" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Queue" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Implement Linked List in phyton" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Data Structures - Introduction" page", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to navigate the practice question page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Traversal" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for empty Username field during Login", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Tree" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land on Homepage after registration with valid fields", "Testing whether user is able to Registered into dsAlgo portal"</td>
+<td></td>
+<td>2</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for all empty fields during Login", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Time Complexity" time complexity page", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land on Login Page", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page for "Graph" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Array" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for mismatched Password and Password Confirmation field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code for "Graph" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land in login page", "Testing whether user is able to Registered into dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code for "Graph Representations" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for empty Password Confirmation field during registration", "Testing whether user is able to Registered into dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Types of Linked List" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to see output for valid python code", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Graph Representations" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message on clicking "Get Started" buttons of "Linked List" on the home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page for "Graph" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Linked List" Data Structure page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Graph" data structure page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Tree" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Graph" page", "Testing whether the user is navigating to Graph Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Home page for an user without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to open the dsAlgo Portal", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error when click on Run button without entering code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to see warning message while selecting "Queue" from the drop down without Sign in.", "TC01 - TC16 - Verify user access to the dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to land on Register Page", "Testing whether user is able to Registered into dsAlgo portal"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user able to sign out successfully", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Practice Questions" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" try Editor page", "Testing whether the user is navigating to DataStructures Page and perform actions"</td>
+<td></td>
+<td>1</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "Insertion" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for invalid Username field during Login", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error message for empty Password field during Login", "Testing whether user is able to login and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to "try Editor" page", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
+<tr>
+<td title='dsAlgo_Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: dsAlgo_Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user receives error for invalid python code", "Testing whether the user is navigating to Linked List Page and perform actions"</td>
+<td></td>
+<td>0</td>
+<td>dsAlgo_Runner.TestRunner@51dcb805</td></tr>
 </table><p>
 </body>
 </html>

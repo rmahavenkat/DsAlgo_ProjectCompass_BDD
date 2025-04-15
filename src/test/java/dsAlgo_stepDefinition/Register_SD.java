@@ -1,19 +1,14 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
-import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.ExcelReader;
 import ds_Algo_PageFactory.Register_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-
-
 
 public class Register_SD {
 
@@ -22,10 +17,10 @@ public class Register_SD {
 
 	@Given("The user is on the home page")
 	public void the_user_is_on_the_home_page() {
-		String url = ConfigReader.getApplicationUrl();
-		driver.navigate().to(url);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		String appurl = driver.getCurrentUrl();
+		String homeurl = "https://dsportalapp.herokuapp.com/home";
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(homeurl, appurl);
 
 	}
 
@@ -91,9 +86,9 @@ public class Register_SD {
 		register.validationmessage();
 	}
 
-	
 	@When("The user clicks Register button after entering a username with spacebar characters other than digits and Special Characters")
-	public void the_user_clicks_register_button_after_entering_a_username_with_spacebar_characters_other_than_digits_and_special_characters() throws IOException {
+	public void the_user_clicks_register_button_after_entering_a_username_with_spacebar_characters_other_than_digits_and_special_characters()
+			throws IOException {
 		register.clearusername();
 		String invalidusername = ExcelReader.getinvalidusername();
 		register.setUserName(invalidusername);
@@ -114,7 +109,7 @@ public class Register_SD {
 
 	@When("The user clicks Register button after entering a password with numeric data")
 	public void the_user_clicks_register_button_after_entering_a_password_with_numeric_data() throws IOException {
-		
+
 		String username = ExcelReader.getvalidusername();
 		register.setUserName(username);
 		register.clearpwd();
@@ -173,15 +168,14 @@ public class Register_SD {
 
 	@When("The user clicks {string} Sign out link on the Home page")
 	public void the_user_clicks_sign_out_link_on_the_home_page(String string) {
-		// register.signout();
+		register.signout();
 	}
 
 	@Then("The user should be redirected to home page with message \"Logged out successfully\"Logged out successfully")
 	public void the_user_should_be_redirected_to_home_page_with_message_logged_out_successfully_logged_out_successfully() {
-//		String logmsg = register.logoutmessage();
-//		System.out.println("===================================");
-//		System.out.println(logmsg);
+		String logmsg = register.logoutmessage();
+		System.out.println("===================================");
+		System.out.println(logmsg);
 	}
 
 }
-
