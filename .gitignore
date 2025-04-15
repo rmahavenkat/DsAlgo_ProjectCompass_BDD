@@ -36,3 +36,11 @@ target/
 Thumbs.db
 desktop.ini
 
+#Reports
+allure-results/
+Reports/
+test-output/
+
+#logs
+logs/
+
