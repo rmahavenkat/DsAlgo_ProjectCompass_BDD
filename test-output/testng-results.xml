@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
+<testng-results ignored="0" total="24" passed="20" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-14T21:27:36 EDT" name="Default suite" finished-at="2025-04-14T21:27:57 EDT" duration-ms="20995">
+  <suite started-at="2025-04-14T22:07:47 EDT" name="Default suite" finished-at="2025-04-14T22:08:10 EDT" duration-ms="23451">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-04-14T21:27:36 EDT" name="Default test" finished-at="2025-04-14T21:27:57 EDT" duration-ms="20995">
+    <test started-at="2025-04-14T22:07:47 EDT" name="Default test" finished-at="2025-04-14T22:08:10 EDT" duration-ms="23451">
       <class name="dsAlgo_Runner.TestRunner">
-        <test-method is-config="true" signature="defineBrowser(java.lang.String)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:36 EDT" name="defineBrowser" finished-at="2025-04-14T21:27:39 EDT" duration-ms="2912" status="PASS">
+        <test-method is-config="true" signature="defineBrowser(java.lang.String)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:47 EDT" name="defineBrowser" finished-at="2025-04-14T22:07:52 EDT" duration-ms="5651" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,18 +21,300 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- defineBrowser -->
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:39 EDT" name="setUpClass" finished-at="2025-04-14T21:27:40 EDT" duration-ms="1119" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:52 EDT" name="setUpClass" finished-at="2025-04-14T22:07:53 EDT" duration-ms="997" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@104392ba]]>
+                <![CDATA[org.testng.TestRunner@3f6a9ba0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:42 EDT" duration-ms="1282" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:53 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:55 EDT" duration-ms="1906" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able to open the dsAlgo Portal"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
+at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
+at dsAlgo_stepDefinition.Home_SD.the_user_should_be_able_to_land_on_ds_algo_portal_with_get_started_button(Home_SD.java:35)
+at ✽.The user should be able to land on dsAlgo portal with Get Started button(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD01_Home.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:55 EDT" duration-ms="146" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Home page for an user without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://dsportalapp.herokuapp.com/] but found [https://dsportalapp.herokuapp.com/home]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
+at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
+at dsAlgo_stepDefinition.Home_SD.the_user_is_on_the_ds_algo_portal(Home_SD.java:44)
+at ✽.The user is on the DS Algo Portal(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD01_Home.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:55 EDT" duration-ms="160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message while selecting "Arrays" from the drop down without Sign in."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="65" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message while selecting "Linked List" from the drop down without Sign in."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="39" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message while selecting "Stack" from the drop down without Sign in."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message while selecting "Queue" from the drop down without Sign in."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="36" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message while selecting "Tree" from the drop down without Sign in."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="40" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Data Structures-Introduction" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="39" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Array" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="40" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Linked List" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:56 EDT" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Stack" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:57 EDT" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Queue" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:57 EDT" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Tree" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:57 EDT" duration-ms="31" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that user able to see warning message on clicking "Get Started" buttons of "Graph" on the home page without Sign in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC01 - TC16 - Verify user access to the dsAlgo portal"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:57 EDT" duration-ms="548" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,7 +330,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:42 EDT" duration-ms="237" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:57 EDT" duration-ms="117" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,7 +346,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:45 EDT" duration-ms="3128" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:58 EDT" duration-ms="741" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -80,7 +362,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:46 EDT" duration-ms="985" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:58 EDT" duration-ms="315" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -96,7 +378,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:47 EDT" duration-ms="1186" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:07:59 EDT" duration-ms="1128" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -126,14 +408,14 @@ at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
 at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
 at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
 at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_data(Register_SD.java:112)
-at ✽.The user is not able to see error msg after entering invalid data(file:///C:/Kalyani/code/DsAlgo_BDD/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:37)
+at ✽.The user is not able to see error msg after entering invalid data(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:37)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:48 EDT" duration-ms="1123" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:07:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:08:00 EDT" duration-ms="699" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -146,31 +428,56 @@ at ✽.The user is not able to see error msg after entering invalid data(file://
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[expected [Invalid password] but found [password_mismatch:The two password fields didn’t match.]]]>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f64599b91c778f8f4a146510953a7d0, getElementText {id=f.356BEAC4C025B93BCBBB1316D257BD90.d.EB1B5A092B3BE6109DACB0791914E4A8.e.51}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\17046\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61859}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61859/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6f64599b91c778f8f4a146510953a7d0)] -> xpath: //*[@class='alert alert-primary']]
+Session ID: 6f64599b91c778f8f4a146510953a7d0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Invalid password] but found [password_mismatch:The two password fields didn’t match.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
-at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
-at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
-at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_password(Register_SD.java:132)
-at ✽.The user is not able to see error msg after entering invalid password(file:///C:/Kalyani/code/DsAlgo_BDD/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:44)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f64599b91c778f8f4a146510953a7d0, getElementText {id=f.356BEAC4C025B93BCBBB1316D257BD90.d.EB1B5A092B3BE6109DACB0791914E4A8.e.51}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\17046\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61859}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61859/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6f64599b91c778f8f4a146510953a7d0)] -> xpath: //*[@class='alert alert-primary']]
+Session ID: 6f64599b91c778f8f4a146510953a7d0
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy33.getText(Unknown Source)
+at ds_Algo_PageFactory.Register_PF.ErrorMessage(Register_PF.java:89)
+at dsAlgo_stepDefinition.Register_SD.the_user_is_not_able_to_see_error_msg_after_entering_invalid_password(Register_SD.java:129)
+at ✽.The user is not able to see error msg after entering invalid password(file:///C:/projectcompass/DsAlgo_ProjectCompass_BDD/src/test/resources/dsAlgo_FeatureFiles/MD02_Register.feature:44)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:49 EDT" duration-ms="769" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:08:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:08:00 EDT" duration-ms="321" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -186,7 +493,7 @@ at ✽.The user is not able to see error msg after entering invalid password(fil
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:52 EDT" duration-ms="2764" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:08:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:08:03 EDT" duration-ms="2500" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -202,7 +509,7 @@ at ✽.The user is not able to see error msg after entering invalid password(fil
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T21:27:52 EDT" duration-ms="170" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:08:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-14T22:08:04 EDT" duration-ms="862" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -218,11 +525,11 @@ at ✽.The user is not able to see error msg after entering invalid password(fil
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:52 EDT" name="tearDownClass" finished-at="2025-04-14T21:27:57 EDT" duration-ms="4737" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:08:04 EDT" name="tearDownClass" finished-at="2025-04-14T22:08:10 EDT" duration-ms="5896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:dsAlgo_Runner.TestRunner@51dcb805]" started-at="2025-04-14T21:27:57 EDT" name="teardown" finished-at="2025-04-14T21:27:57 EDT" duration-ms="465" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:dsAlgo_Runner.TestRunner@1613674b]" started-at="2025-04-14T22:08:10 EDT" name="teardown" finished-at="2025-04-14T22:08:10 EDT" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
