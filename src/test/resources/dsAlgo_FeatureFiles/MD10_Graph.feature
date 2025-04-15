@@ -72,7 +72,7 @@ Feature: Testing whether the user is navigating to Graph Page and perform action
   @TC243
   Scenario: Verify that user is able to see output for valid python code for "Graph Representations" page
     Given The user is in the tryEditor page
-    When The user write the valid code in Editor and click the Run Button
+    When The user write the valid code in Editor and click the Run button
     Then The user should able to see output in the console of Graph Representations
 
   @TC244

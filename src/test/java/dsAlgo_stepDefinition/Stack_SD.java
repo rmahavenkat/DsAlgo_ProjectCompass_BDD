@@ -1,16 +1,14 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
-import dsAlgo_Utilities.ConfigReader;
-import dsAlgo_Utilities.ExcelReader;
 import ds_Algo_PageFactory.Stack_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 
 public class Stack_SD {
 
@@ -20,10 +18,10 @@ public class Stack_SD {
 	@Given("The user is in the Home page after Sign in")
 	public void the_user_is_in_the_home_page_after_sign_in() throws IOException {
 		String currenturl = driver.getCurrentUrl();
-		String Expectedurl="https://dsportalapp.herokuapp.com/home";
+		String Expectedurl = "https://dsportalapp.herokuapp.com/home";
 		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl,Expectedurl );
-		
+		assertion.assertEquals(currenturl, Expectedurl);
+
 	}
 
 	@When("{string}{string}{string}")
@@ -61,7 +59,7 @@ public class Stack_SD {
 	public void the_user_should_be_redirected_to_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 
-		String url = null;
+		String url = "";
 
 		switch (string) {
 		case "Operations in Stack":
@@ -84,7 +82,7 @@ public class Stack_SD {
 	public void the_user_is_on_the_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 
-		String url = null;
+		String url = "";
 
 		switch (string) {
 		case "Operations in Stack":
@@ -121,52 +119,6 @@ public class Stack_SD {
 		String Expectedurl = "https://dsportalapp.herokuapp.com/tryEditor";
 		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-
-	}
-
-	@Given("The user is in the tryEditor page")
-	public void the_user_is_in_the_try_editor_page() {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/tryEditor";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
-	}
-
-	@When("The user clicks the Run Button without entering the code in the Editor")
-	public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor() {
-		stack.runbtntest();
-	}
-
-	@Then("The user should able to see an error message in alert window")
-	public void the_user_should_able_to_see_an_error_message_in_alert_window() {
-		stack.alertmessage();
-
-	}
-
-	@When("The user write the invalid code in Editor and click the Run Button")
-	public void the_user_write_the_invalid_code_in_editor_and_click_the_run_button()
-			throws IOException, InterruptedException {
-		driver.navigate().back();
-		stack.tryeditorpage();
-		String invalidmsg = ExcelReader.getinvalidpythoncode();
-		stack.texteditor(invalidmsg);
-		stack.runbtntest();
-	}
-
-	@When("The user write the valid code in Editor and click the Run Button")
-	public void the_user_write_the_valid_code_in_editor_and_click_the_run_button()
-			throws IOException, InterruptedException {
-		driver.navigate().back();
-		stack.tryeditorpage();
-		String validmsg = ExcelReader.getvalidpythoncode();
-		stack.texteditor(validmsg);
-		stack.runbtntest();
-	}
-
-	@Then("The user should able to see output in the console")
-	public void the_user_should_able_to_see_output_in_the_console() {
-		stack.getoutput();
-		driver.navigate().back();
 
 	}
 
@@ -217,8 +169,8 @@ public class Stack_SD {
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/practice";
 		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-		String url=ConfigReader.getApplicationUrl();
-		driver.navigate().to(url);
+		// driver.navigate().to("https://dsportalapp.herokuapp.com/home");
+		// driver.navigate().to("https://dsportalapp.herokuapp.com/home");
 
 	}
 }

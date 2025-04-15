@@ -15,6 +15,7 @@ public class Login_SD {
 	WebDriver driver = driverfactory.getDriver();
 	Assertion assertion = new Assertion();
 	public Login_PF login = new Login_PF(driver);
+
 	@Given("The user is on the DS Algo Home Page")
 	public void the_user_is_on_the_ds_algo_home_page() throws InterruptedException {
 		// Get initialized WebDriver
@@ -124,7 +125,7 @@ public class Login_SD {
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
 	}
 
-	@Given("The user is in the Home page after Sign in")
+	@Given("The user is in the Home page after Login in")
 	public void the_user_is_in_the_home_page_after_sign_in() {
 		System.out.println("user in Home page");
 		String currenturl = driver.getCurrentUrl();

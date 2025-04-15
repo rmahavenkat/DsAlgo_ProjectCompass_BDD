@@ -15,7 +15,6 @@ public class LinkedList_SD {
 	Assertion assertion = new Assertion();
 	public Login_PF login = new Login_PF(driver);
 	public DataStructure_PF datastruct = new DataStructure_PF(driver);
-	//public graph_PageF graph = new graph_PageF(driver);
 	public LinkedList_PF linkedlist = new LinkedList_PF(driver);
 
 	@When("The user clicks the {string} Getting Started button in Linked List panel OR The user select Linked List item from the drop down menu")

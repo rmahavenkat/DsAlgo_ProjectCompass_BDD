@@ -39,6 +39,6 @@ Feature: Testing whether user is able to login and perform actions
 
   @TC32
   Scenario: Verify that user able to sign out successfully
-    Given The user is in the Home page after Sign in
+    Given The user is in the Home page after Login in
     When The user clicks "Sign out"
     Then The user should be redirected to home page with message "Logged out successfully"

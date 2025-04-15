@@ -19,6 +19,7 @@ public class DataStructure_SD {
 
 	@Given("The user is in the Home page after logged in")
 	public void the_user_is_in_the_home_page_after_logged_in() throws IOException {
+	
 		String currenturl = driver.getCurrentUrl();
 		String expectedurl = "https://dsportalapp.herokuapp.com/home";
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
@@ -100,7 +101,7 @@ public class DataStructure_SD {
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/tryEditor");
 	}
 
-	@When("The user clicks the Run Button without entering the code in the Editor")
+	@When("The user clicks the Run button without entering the code in the Editor")
 	public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor() {
 		datastruct.clickRunButton();
 	}
@@ -110,7 +111,7 @@ public class DataStructure_SD {
 		datastruct.alertmessage();
 	}
 
-	@When("The user write the invalid code in Editor and click the Run Button")
+	@When("The user write the invalid code in Editor and click the Run button")
 	public void the_user_write_the_invalid_code_in_editor_and_click_the_run_button()
 			throws IOException, InterruptedException {
 		driver.navigate().back();
@@ -120,7 +121,7 @@ public class DataStructure_SD {
 		datastruct.clickRunButton();
 	}
 
-	@When("The user write the valid code in Editor and click the Run Button")
+	@When("The user write the valid code in Editor and click the Run button")
 	public void the_user_write_the_valid_code_in_editor_and_click_the_run_button()
 			throws IOException, InterruptedException {
 		driver.navigate().back();
@@ -134,6 +135,7 @@ public class DataStructure_SD {
 	public void the_user_should_able_to_see_output_in_the_console() {
 		datastruct.getOutputText();
 		driver.navigate().to("https://dsportalapp.herokuapp.com/home");
+		
 	}
 
 }

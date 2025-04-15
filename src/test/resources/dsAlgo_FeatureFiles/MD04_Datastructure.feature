@@ -32,17 +32,17 @@ Feature: Testing whether the user is navigating to DataStructures Page and perfo
   @TC37
   Scenario: Verify that user receives error when click on Run button without entering code
     Given The user is in the tryEditor page
-    When The user clicks the Run Button without entering the code in the Editor
+    When The user clicks the Run button without entering the code in the Editor
     Then The user should able to see an error message in alert window
 
   @TC38
   Scenario: Verify that user receives error for invalid python code
     Given The user is in the tryEditor page
-    When The user write the invalid code in Editor and click the Run Button
+    When The user write the invalid code in Editor and click the Run button
     Then The user should able to see an error message in alert window
 
   @TC39
   Scenario: Verify that user is able to see output for valid python code
     Given The user is in the tryEditor page
-    When The user write the valid code in Editor and click the Run Button
+    When The user write the valid code in Editor and click the Run button
     Then The user should able to see output in the console
