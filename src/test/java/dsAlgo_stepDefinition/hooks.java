@@ -41,9 +41,13 @@ public class hooks {
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
 
-			// For Extent Reports
+			/*// For Extent Reports
 			File screenshot_Extent = (File) driverfactory.getDriver();
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshot_Extent);
+			scenario.attach(fileContent, "image/png", "screenshot");*/
+			// Extent reports or saving file
+			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
+			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
 			scenario.attach(fileContent, "image/png", "screenshot");
 		}
 	}

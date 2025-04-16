@@ -134,4 +134,3 @@ Feature: Testing Whether user is directed to "Stack" Data Structure Page
     Given The user is on the "Operations in Stack" page
     When The user clicks "Practice Questions" button to test
     Then The user should be redirected to "Practice Questions" Practice Questions page   
- 

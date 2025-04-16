@@ -1,16 +1,22 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.ExcelReader;
+=======
+
+import org.openqa.selenium.WebDriver;
+import org.testng.asserts.Assertion;
+import dsAlgo_DriverFactory.driverfactory;
+>>>>>>> origin/branch_lakshmipriya
 import ds_Algo_PageFactory.Stack_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 
 public class Stack_SD {
 
@@ -20,10 +26,9 @@ public class Stack_SD {
 	@Given("The user is in the Home page after Sign in")
 	public void the_user_is_in_the_home_page_after_sign_in() throws IOException {
 		String currenturl = driver.getCurrentUrl();
-		String Expectedurl="https://dsportalapp.herokuapp.com/home";
+		String Expectedurl = "https://dsportalapp.herokuapp.com/home";
 		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl,Expectedurl );
-		
+		assertion.assertEquals(currenturl, Expectedurl);
 	}
 
 	@When("{string}{string}{string}")
@@ -61,7 +66,7 @@ public class Stack_SD {
 	public void the_user_should_be_redirected_to_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 
-		String url = null;
+		String url = "";
 
 		switch (string) {
 		case "Operations in Stack":
@@ -84,7 +89,7 @@ public class Stack_SD {
 	public void the_user_is_on_the_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 
-		String url = null;
+		String url = "";
 
 		switch (string) {
 		case "Operations in Stack":
@@ -219,6 +224,5 @@ public class Stack_SD {
 		assertion.assertEquals(currenturl, Expectedurl);
 		String url=ConfigReader.getApplicationUrl();
 		driver.navigate().to(url);
-
 	}
 }
