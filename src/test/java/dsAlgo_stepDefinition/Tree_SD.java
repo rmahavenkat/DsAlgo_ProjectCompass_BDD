@@ -155,10 +155,10 @@ public class Tree_SD {
 			    	assertion.assertEquals(currenturl,Expectedurl);
 	}
 
-	@When("The user clicks {string} Practice Questions button")
+	/*@When("The user clicks {string} Practice Questions button")
 	public void the_user_clicks_practice_questions_button(String string) {
 		 tree.clickPracticeQuestion();
-	}
+	}*/
 
 	@When("The user clicks {string} Terminologies button")
 	public void the_user_clicks_terminologies_button(String string) {

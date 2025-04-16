@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
-import dsAlgo_Utilities.ExcelReader;
-
 import ds_Algo_PageFactory.Stack_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -123,52 +121,6 @@ public class Stack_SD {
 
 	}
 
-	@Given("The user is in the tryEditor page")
-	public void the_user_is_in_the_try_editor_page() {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/tryEditor";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
-	}
-
-	@When("The user clicks the Run Button without entering the code in the Editor")
-	public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor() {
-		stack.runbtntest();
-	}
-
-	@Then("The user should able to see an error message in alert window")
-	public void the_user_should_able_to_see_an_error_message_in_alert_window() {
-		stack.alertmessage();
-
-	}
-
-	@When("The user write the invalid code in Editor and click the Run Button")
-	public void the_user_write_the_invalid_code_in_editor_and_click_the_run_button()
-			throws IOException, InterruptedException {
-		driver.navigate().back();
-		stack.tryeditorpage();
-		String invalidmsg = ExcelReader.getinvalidpythoncode();
-		stack.texteditor(invalidmsg);
-		stack.runbtntest();
-	}
-
-	@When("The user write the valid code in Editor and click the Run Button")
-	public void the_user_write_the_valid_code_in_editor_and_click_the_run_button()
-			throws IOException, InterruptedException {
-		driver.navigate().back();
-		stack.tryeditorpage();
-		String validmsg = ExcelReader.getvalidpythoncode();
-		stack.texteditor(validmsg);
-		stack.runbtntest();
-	}
-
-	@Then("The user should able to see output in the console")
-	public void the_user_should_able_to_see_output_in_the_console() {
-		stack.getoutput();
-		driver.navigate().back();
-
-	}
-
 	@When("The user clicks {string} Implementation button")
 	public void the_user_clicks_implementation_button(String string) {
 		stack.implementationinstackpage();
@@ -216,7 +168,7 @@ public class Stack_SD {
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/practice";
 		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-		String url=ConfigReader.getApplicationUrl();
+		String url = ConfigReader.getApplicationUrl();
 		driver.navigate().to(url);
 	}
 }

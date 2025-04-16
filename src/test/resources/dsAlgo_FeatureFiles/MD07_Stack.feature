@@ -26,14 +26,14 @@ Feature: Testing Whether user is directed to "Stack" Data Structure Page
   Scenario: Verify that user receives error when click on Run button without entering code for "Operations in Stack" page
   
     Given The user is in the tryEditor page
-    When The user clicks the Run Button without entering the code in the Editor
+    When The user clicks the Run button without entering the code in the Editor
     Then The user should able to see an error message in alert window
  
  @TC192
   Scenario: Verify that user receives error for invalid python code for "Operations in Stack" page
   
     Given The user is in the tryEditor page
-    When The user write the invalid code in Editor and click the Run Button
+    When The user write the invalid code in Editor and click the Run button
     Then The user should able to see an error message in alert window
  
  @TC193
@@ -61,14 +61,14 @@ Feature: Testing Whether user is directed to "Stack" Data Structure Page
   Scenario: Verify that user receives error when click on Run button without entering code for "Implementation" page
   
     Given The user is in the tryEditor page
-    When The user clicks the Run Button without entering the code in the Editor
+    When The user clicks the Run button without entering the code in the Editor
     Then The user should able to see an error message in alert window
  
  @TC197
   Scenario: Verify that user receives error for invalid python code for "Implementation" page
   
     Given The user is in the tryEditor page
-    When The user write the invalid code in Editor and click the Run Button
+    When The user write the invalid code in Editor and click the Run button
     Then The user should able to see an error message in alert window
  
   @TC198
@@ -81,7 +81,7 @@ Feature: Testing Whether user is directed to "Stack" Data Structure Page
  @TC199
   Scenario: Verify that user is able to navigate to "Applications" page
   
-    Given The user is in the "Applications" page 
+    Given The user is on the "Applications" page 
     When The user clicks "Applications" Applications button
     Then The user should be redirected to "Applications" page
     
@@ -96,14 +96,14 @@ Feature: Testing Whether user is directed to "Stack" Data Structure Page
   Scenario: Verify that user receives error when click on Run button without entering code for "Applications" page
   
     Given The user is in the tryEditor page
-    When The user clicks the Run Button without entering the code in the Editor
+    When The user clicks the Run button without entering the code in the Editor
     Then The user should able to see an error message in alert window
     
     @TC202
   Scenario: Verify that user receives error for invalid python code for "Applications" page
   
     Given The user is in the tryEditor page
-    When The user write the invalid code in Editor and click the Run Button
+    When The user write the invalid code in Editor and click the Run button
     Then The user should able to see an error message in alert window
     
   @TC203
