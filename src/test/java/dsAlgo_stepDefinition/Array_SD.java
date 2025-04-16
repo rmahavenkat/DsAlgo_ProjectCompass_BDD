@@ -210,7 +210,8 @@ public class Array_SD {
 		String expectedMsg = "Submission successful";
 		Assertion assertion = new Assertion();
 	    assertion.assertEquals(actualMsg,expectedMsg);
-	   driver.navigate().back();
+	    driver.navigate().back();
+	    
 	}
 	@Given("The user is on the practice question2 editor")
 	public void the_user_is_on_the_practice_question2_editor() {
@@ -248,4 +249,14 @@ public class Array_SD {
 	    Assertion assertion = new Assertion();
 	    assertion.assertEquals(actualUrl,expectedUrl);
 }
+	@Then("The user see success message for {string}")
+	public void the_user_see_success_message_for(String string) {
+		String actualMsg = array.getErrorMsg(); // error occure sum for valid code
+		String expectedMsg = "Submission successful";
+		Assertion assertion = new Assertion();
+	    assertion.assertEquals(actualMsg,expectedMsg);
+	    driver.navigate().back();
+	    String url1 = "https://dsportalapp.herokuapp.com/home";
+		driver.navigate().to(url1);
+	}
 }

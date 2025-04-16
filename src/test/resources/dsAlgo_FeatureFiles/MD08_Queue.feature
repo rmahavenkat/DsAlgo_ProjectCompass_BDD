@@ -120,33 +120,35 @@ Feature: Testing Whether user is directed to "Queue" Data Structure Page
     Given The user is in the "Queue" Data Structure Page
     When The user clicks "Queue Operations" button in the Queue page
     Then The user be redirected to "Queue Operations" page
+    
+   @TC227
+  Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Queue Operations" page
+    Given The user is in the "Queue Operations" Data Structure Page
+    When The user clicks "Practice Questions" button in the Queue page
+    Then The user be redirected to "Practice Questions" page
 
-  @TC227
+  @TC228
   Scenario: Verify that user is able to navigate to "try Editor" page for "Queue Operations" page
     Given The user is in the "Queue Operations" Page
     When The user clicks  "Try Here" button in Queue Operations page
     Then The user should be redirected to a page having an try Editor with a Run button
 
-  @TC228
+  @TC229
   Scenario: Verify that user receives error when click on Run button without entering code for "Queue Operations" page
     Given The user is in the tryEditor page for "Queue Operations"
     When The user clicks the Run Button without entering the code in the tryEditor
     Then The user should able to see an error message in alert window for "Queue Operations"
 
-  @TC229
+  @TC230
   Scenario: Verify that user receives error for invalid python code for "Queue Operations" page
     Given The user is in the tryEditor page for "Queue Operations"
     When The user write the invalid code in tryEditor and click the Run Button
     Then The user should able to see an error message in alert window for "Queue Operations"
 
-  @TC230
+  @TC231
   Scenario: Verify that user is able to see output for valid python code for "Queue Operations" page
     Given The user is in the tryEditor page for "Queue Operations"
     When The user write the valid code in tryEditor and click the Run Button
     Then The user should able to see output in console
 
-  @TC231
-  Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Queue Operations" page
-    Given The user is in the "Queue" Data Structure Page
-    When The user clicks "Practice Questions" button in the Queue page
-    Then The user be redirected to "Practice Questions" page
+ 

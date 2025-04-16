@@ -152,7 +152,9 @@ public class Queue_SD {
 	@Then("The user should able to see output in console")
 	public void the_user_should_able_to_see_output_in_console() {
 		queue.getoutput();
-		driver.navigate().back();
+		String url1 = "https://dsportalapp.herokuapp.com/home";
+		driver.navigate().to(url1);
+		
 	}
 
 	@Given("The user is in the {string} Page")

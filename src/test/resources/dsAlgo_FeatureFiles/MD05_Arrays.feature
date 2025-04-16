@@ -524,4 +524,4 @@ Then The user should able to see output
 Scenario: Verify that user receives error on submitting valid python code for "Square of a sorted array" question
 Given The user is on the practice question4 editor
 When The user Click the Submit Button
-Then The user see success message "Submission successful"
+Then The user see success message for "Submission successful"

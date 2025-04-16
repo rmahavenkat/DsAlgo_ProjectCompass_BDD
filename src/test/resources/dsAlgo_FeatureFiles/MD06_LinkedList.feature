@@ -7,7 +7,7 @@ Feature: Testing whether the user is navigating to Linked List Page and perform 
 
   @TC145
   Scenario: Verify that user is able to navigate to "Linked List" Data Structure page
-    Given The user is in the Home page after logged in
+    Given The user is in the Home page after logged in Linked List
     When The user clicks the "Getting Started" Getting Started button in Linked List panel OR The user select Linked List item from the drop down menu
     Then The user should land in "Linked-List Page"
 

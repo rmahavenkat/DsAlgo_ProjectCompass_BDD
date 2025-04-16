@@ -4,7 +4,6 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
-import dsAlgo_Utilities.ConfigReader;
 import ds_Algo_PageFactory.Stack_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -168,7 +167,7 @@ public class Stack_SD {
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/practice";
 		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-		String url = ConfigReader.getApplicationUrl();
+		String url = "https://dsportalapp.herokuapp.com/home";
 		driver.navigate().to(url);
 	}
 }
