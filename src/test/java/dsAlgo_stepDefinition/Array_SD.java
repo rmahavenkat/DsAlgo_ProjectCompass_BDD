@@ -3,53 +3,32 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
-import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.ExcelReader;
 import ds_Algo_PageFactory.Array_PF;
 import io.cucumber.java.en.*;
 public class Array_SD {
 	WebDriver driver = driverfactory.getDriver();
 	Array_PF array = new Array_PF(driver);
-	
-	@Given("The user is in the Home page after Sign in")
-	public void the_user_is_in_the_home_page_after_sign_in() throws IOException {
-		driver.get(ConfigReader.getApplicationUrl());
-		array.clicksigninBtn();
-		array.enterusername(ExcelReader.getvalidusername());
-		array.enterpassword(ExcelReader.getvalidpassword());
-	    array.clickloginBtn();
-	    Assertion assertion = new Assertion();
-	    String actualUrl = driver.getCurrentUrl();
-	    String expectedUrl = "https://dsportalapp.herokuapp.com/home";
-	    assertion.assertEquals(actualUrl, expectedUrl);
-	}
-
 	@When("The user clicks the \"\"Getting Started\"\" button in Array Panel OR The user select Array item from the drop down menu")
 	public void the_user_clicks_the_getting_started_button_in_array_panel_or_the_user_select_array_item_from_the_drop_down_menu() {
 		array.clickArrayGetStartBtn();
 	}
 
-	@Then("The user be directed to {string} Data Structure Page")
+	@Then("The user be redirected to {string} array Data Structure Page")
 	public void the_user_be_directed_to_data_structure_page(String string) {
 		String actualUrl = driver.getCurrentUrl();
 		String expectedUrl = "https://dsportalapp.herokuapp.com/array/";
 	    Assertion assertion = new Assertion();
 	    assertion.assertEquals(actualUrl,expectedUrl);
-	}
-	@Given("The user is in the {string} page after Sign in")
+	} 
+	@Given("The user is in the {string} array page after Sign in")
 	public void the_user_is_in_the_page_after_sign_in(String string) {
 		String actualUrl = driver.getCurrentUrl();
 		String expectedUrl = "https://dsportalapp.herokuapp.com/array/";
 	    Assertion assertion = new Assertion();
 	    assertion.assertEquals(actualUrl,expectedUrl);
-	}
-
-	@When("The user clicks {string} button")
-	public void the_user_clicks_button(String string) {
-		array.clickArrayInpython();
-	}
-
-	@Then("The user should be redirected to {string} page")
+	} 
+	@Then("The user should be redirected to {string} array page")
 	public void the_user_should_be_redirected_to_page(String string) {
 		String currenturl = driver.getCurrentUrl(); 
 		String url = "";
@@ -80,7 +59,7 @@ public class Array_SD {
 		assertion.assertEquals(currenturl, Expectedurl);
 		   
 	}
-	@Given("The user is on the {string} page")
+	@Given("The user is on the {string} array page")
 	public void the_user_is_on_the_page(String string) {
 		String currenturl = driver.getCurrentUrl();	 
 		String url = "";
@@ -114,32 +93,7 @@ public class Array_SD {
 	public void the_user_clicks_button_in_arrays_in_python_page(String string) {
 		array.clickArrayInpythonTryHere();
 	}
-
-	@Then("The user should be redirected to a page having an try Editor with a Run button to test")
-	public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
-		String arraypage = driver.getCurrentUrl();
-		   String expecturl = "https://dsportalapp.herokuapp.com/tryEditor";
-		   Assertion assertion = new Assertion();
-		    assertion.assertEquals(arraypage, expecturl);
-	}
-	@Given("The user is in the tryEditor page")
-	public void the_user_is_in_the_try_editor_page() {
-		String arraypage = driver.getCurrentUrl();
-		   String expecturl = "https://dsportalapp.herokuapp.com/tryEditor";
-		   Assertion assertion = new Assertion();
-		    assertion.assertEquals(arraypage, expecturl);
-	}
-
-	@When("The user clicks the Run Button without entering the code in the Editor")
-	public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor() throws InterruptedException {
-		array.click_runBtn();
-	}
-
-	@Then("The user should able to see an error message in alert window")//bug @TC43
-	public void the_user_should_able_to_see_an_error_message_in_alert_window() {
-		array.alertmessage();
-	}
-	@When("The user write the invalid code in Editor and click the Run Button")
+	@When("The user write the invalid code in Editor and clicks the Run button")
 	public void the_user_write_the_invalid_code_in_editor_and_click_the_run_button() throws IOException, InterruptedException {
 		driver.navigate().back();
 		array.clickArrayInpythonTryHere();
@@ -156,11 +110,6 @@ public class Array_SD {
 	     array.click_runBtn();
 	}
 
-	@Then("The user should able to see output in the console")
-	public void the_user_should_able_to_see_output_in_the_console() {
-	    array.seeoutput();
-	    driver.navigate().back();
-	}
 	@When("The user clicks {string} Practice Questions button")
 	public void the_user_clicks_practice_questions_button(String string) {
 		array.click_PracticeQBtn();
@@ -291,7 +240,7 @@ public class Array_SD {
 		Assertion assertion = new Assertion();
 	    assertion.assertEquals(actualMsg,expectedMsg);
 	}
-	@Given("The user is in the {string} page")
+	@Given("The user in the {string} page")
 	public void the_user_is_in_the_page(String string) {
 		driver.navigate().to("https://dsportalapp.herokuapp.com/array/arrays-in-python/");
 		String actualUrl = driver.getCurrentUrl();

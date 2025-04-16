@@ -7,7 +7,7 @@
         <methods>
           <include name="setUpClass"/>
           <include name="defineBrowser"/>
-          <include name="runScenario" invocation-numbers="19 20"/>
+          <include name="runScenario" invocation-numbers="64 130 132 135 73 137 75 140 78 142 143 80 144 19 83 20 85 88 90 99 101 105 106 109 47 111 49 114 52 116 54 57 59 125 62 127"/>
           <include name="tearDownClass"/>
           <include name="teardown"/>
         </methods>
