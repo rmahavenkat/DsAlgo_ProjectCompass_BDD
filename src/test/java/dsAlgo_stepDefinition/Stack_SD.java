@@ -1,18 +1,12 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-<<<<<<< HEAD
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
 import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.ExcelReader;
-=======
 
-import org.openqa.selenium.WebDriver;
-import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
->>>>>>> origin/branch_lakshmipriya
 import ds_Algo_PageFactory.Stack_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
