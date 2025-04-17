@@ -16,8 +16,9 @@ import io.cucumber.testng.CucumberOptions;
 
 		plugin = { "pretty", "html:target/reports.html", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:" }, // reporting purpose
+
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","com.aventstack.chaintest.plugins.ChainTestCucumberListener:" }, // reporting purpose
+
 
 		dryRun = false, monochrome = true, // console output color
 		 tags = "@HomeScenario", // tags from feature file
