@@ -103,11 +103,7 @@
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
 </dependency>
-<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>chaintest-cucumber-jvm</artifactId>
-    <version>1.0.12</version>
-</dependency>
+
 <dependency>
 <groupId>io.github.bonigarcia</groupId>
 <artifactId>webdrivermanager</artifactId>
@@ -119,6 +115,13 @@
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.5.3</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.aventstack/chaintest-cucumber-jvm -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>chaintest-cucumber-jvm</artifactId>
+    <version>1.0.12</version>
 </dependency>
 
   </dependencies>
