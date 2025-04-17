@@ -41,11 +41,13 @@ public class hooks {
 	public void afterstep(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 			LoggerReader.error("Steps Failed, Taking Screenshot");
+			
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
+			
 			// Extent reports or saving file
 			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
@@ -56,21 +58,15 @@ public class hooks {
 	@After
 	public void teardownScenario(Scenario scenario) {
 	    WebDriver driver = driverfactory.getDriver(); // Use ThreadLocal-safe getter
+	}
 
-<<<<<<< HEAD
-	    if (driver != null) {
-	        LoggerReader.info("Closing browser after scenario: " + scenario.getName());
-	        driver.quit();  // Close browser
-	       
-	    }
-=======
 	@After
 	public static void teardown() throws Throwable {
 		if (driver != null) {
 			LoggerReader.info("Closing browser after all tests");
 			driverfactory.quitDriver();
 		}
->>>>>>> 9f13dda (added)
+
 	}
 
 	/*@AfterTest
