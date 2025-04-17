@@ -20,6 +20,7 @@ public class hooks {
 
 	public static WebDriver driver;
 	public static boolean isDriverInitialized = true;
+
 	@Before
 	public void setup() throws Throwable {
 		if (!isDriverInitialized) {
@@ -29,22 +30,18 @@ public class hooks {
 			isDriverInitialized = true;
 		}
 	}
-	
+
 	@AfterStep
 	public void afterstep(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 			LoggerReader.error("Steps Failed, Taking Screenshot");
-			
+
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
 
-			/*// For Extent Reports
-			File screenshot_Extent = (File) driverfactory.getDriver();
-			byte[] fileContent = FileUtils.readFileToByteArray(screenshot_Extent);
-			scenario.attach(fileContent, "image/png", "screenshot");*/
 			// Extent reports or saving file
 			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
