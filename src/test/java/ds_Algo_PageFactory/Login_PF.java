@@ -65,7 +65,9 @@ public class Login_PF {
 
 	// Method to validate logged in message
 	public String getValidationMessage(WebElement element) {
-		return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].validationMessage;", element);
+
+		return (String) ((JavascriptExecutor) driver)
+				.executeScript("return arguments[0].validationMessage;", element);
 
 	}
 
