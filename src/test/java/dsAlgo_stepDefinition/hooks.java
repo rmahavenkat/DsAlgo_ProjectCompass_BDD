@@ -38,11 +38,13 @@ public class hooks {
 	public void afterstep(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 			LoggerReader.error("Steps Failed, Taking Screenshot");
+			
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
+			
 			// Extent reports or saving file
 			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
