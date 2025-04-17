@@ -3,11 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>DsAlgo_ProjectCompass_BDD</groupId>
-	<artifactId>DsAlgo_ProjectCompass_BDD</artifactId>
+	<artifactId>
+	DsAlgo_ProjectCompass_BDD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<dependencies>
-		
+
 		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -129,5 +130,5 @@
 		</dependency>
 
 	</dependencies>
-
-</project>
+	>>>>>>> 709bb62 (added chaintest chainLP and modified Login page and added
+	chain test Plugin in testrunner,pom) </project>
