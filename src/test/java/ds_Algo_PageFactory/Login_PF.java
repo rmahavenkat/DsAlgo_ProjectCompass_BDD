@@ -65,12 +65,9 @@ public class Login_PF {
 
 	// Method to validate logged in message
 	public String getValidationMessage(WebElement element) {
-<<<<<<< HEAD
 
-    return (String) ((JavascriptExecutor) driver)
-=======
 		return (String) ((JavascriptExecutor) driver)
->>>>>>> ab71ee5 (added chaintest chainLP and modified Login page and added chain test Plugin in testrunner,pom)
+
 				.executeScript("return arguments[0].validationMessage;", element);
 
 
