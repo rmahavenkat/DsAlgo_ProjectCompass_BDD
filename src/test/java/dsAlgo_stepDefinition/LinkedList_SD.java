@@ -16,7 +16,7 @@ public class LinkedList_SD {
 	public Login_PF login = new Login_PF(driver);
 	public DataStructure_PF datastruct = new DataStructure_PF(driver);
 	public LinkedList_PF linkedlist = new LinkedList_PF(driver);
-	
+
 	@Given("The user is in the Home page after logged in Linked List")
 	public void the_user_is_in_the_home_page_after_logged_in_linked_list() {
 		driver.navigate().to("https://dsportalapp.herokuapp.com/home");

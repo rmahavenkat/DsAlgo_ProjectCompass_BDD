@@ -154,7 +154,7 @@ public class Queue_SD {
 		queue.getoutput();
 		String url1 = "https://dsportalapp.herokuapp.com/home";
 		driver.navigate().to(url1);
-		
+
 	}
 
 	@Given("The user is in the {string} Page")

@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>DSALgo_ProjectCompass_BDD</groupId>
-	<artifactId>DSALgo_ProjectCompass_BDD</artifactId>
+	<groupId>DsAlgo_ProjectCompass_BDD</groupId>
+	<artifactId>DsAlgo_ProjectCompass_BDD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	 <dependencies>
 		<!--
@@ -103,7 +103,11 @@
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
 </dependency>
-
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>chaintest-cucumber-jvm</artifactId>
+    <version>1.0.12</version>
+</dependency>
 <dependency>
 <groupId>io.github.bonigarcia</groupId>
 <artifactId>webdrivermanager</artifactId>

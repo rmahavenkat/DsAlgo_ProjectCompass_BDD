@@ -19,7 +19,7 @@ public class DataStructure_SD {
 
 	@Given("The user is in the Home page after logged in")
 	public void the_user_is_in_the_home_page_after_logged_in() throws IOException {
-	
+
 		String currenturl = driver.getCurrentUrl();
 		String expectedurl = "https://dsportalapp.herokuapp.com/home";
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
@@ -135,7 +135,7 @@ public class DataStructure_SD {
 	public void the_user_should_able_to_see_output_in_the_console() {
 		datastruct.getOutputText();
 		driver.navigate().to("https://dsportalapp.herokuapp.com/home");
-		
+
 	}
 
 }

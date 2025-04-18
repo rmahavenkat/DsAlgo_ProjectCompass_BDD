@@ -74,7 +74,6 @@ public class Graph_SD {
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/tryEditor");
 	}
 
-	
 	@Then("The user should able to see output in the console Graph")
 	public void the_user_should_able_to_see_output_in_the_console_graph() {
 		graph.getOutputText();
@@ -128,12 +127,15 @@ public class Graph_SD {
 		graph.clickTryHereButton();
 	}
 
-	/*@Then("The user should be redirected to a page having an try Editor with a Run button to test")
-	public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/tryEditor";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/tryEditor");
-	}*/
+	/*
+	 * @Then("The user should be redirected to a page having an try Editor with a Run button to test"
+	 * ) public void
+	 * the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test
+	 * () { String currenturl = driver.getCurrentUrl(); String expectedurl =
+	 * "https://dsportalapp.herokuapp.com/tryEditor";
+	 * assertion.assertEquals(currenturl, expectedurl,
+	 * "https://dsportalapp.herokuapp.com/tryEditor"); }
+	 */
 
 	@When("The user clicks the Run Button without entering the code in the Editor	 of Graph Representations")
 	public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor_of_graph_representations() {

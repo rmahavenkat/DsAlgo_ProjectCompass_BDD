@@ -39,12 +39,12 @@ public class Tree_PF {
 	@FindBy(xpath = "//a[text()='Implementation Of BST']")
 	WebElement implementationofbstbutton;
 
-public Tree_PF(WebDriver driver) {
-		
-		this.driver=driver;
+	public Tree_PF(WebDriver driver) {
+
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		
-		}
+
+	}
 
 	public void clickGetStartButton() {
 		getstartbutton.click();
