@@ -20,6 +20,7 @@ public class hooks {
 
 	public static WebDriver driver;
 
+
 	@BeforeAll
 	public static void setupAll() throws Throwable {
 		LoggerReader.info("browser opened");
@@ -29,7 +30,6 @@ public class hooks {
 		LoggerReader.info("browser initialized");
 		LoggerReader.info("browser opened get driver");
 		driverfactory.getDriver().get(ConfigReader.getApplicationUrl());
-	}
 
 	@AfterStep
 	public void afterstep(Scenario scenario) throws IOException {
@@ -37,6 +37,7 @@ public class hooks {
 		if (scenario.isFailed()) {
 
 			LoggerReader.error("Steps Failed, Taking Screenshot");
+
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
