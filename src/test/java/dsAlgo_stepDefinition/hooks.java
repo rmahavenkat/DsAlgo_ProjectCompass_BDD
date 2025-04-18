@@ -24,9 +24,9 @@ public class hooks {
 	public static WebDriver driver;
 	public static boolean isDriverInitialized = true;
 
-	@BeforeAll
-	public static void setup() throws Throwable {
-		LoggerReader.info("hooks started");
+	@Before
+	public void setup() throws Throwable {
+
 		if (!isDriverInitialized) {
 			LoggerReader.info("hooks driver intialized");
 			String browser = ConfigReader.getBrowserType(); // Make sure this returns a value
