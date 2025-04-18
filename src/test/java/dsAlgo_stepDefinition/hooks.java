@@ -9,8 +9,11 @@ import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.LoggerReader;
 import java.io.ByteArrayInputStream;
+
+import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;
 import java.io.File;
@@ -35,13 +38,11 @@ public class hooks {
 	public void afterstep(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 			LoggerReader.error("Steps Failed, Taking Screenshot");
-
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
-
 			// Extent reports or saving file
 			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
@@ -49,7 +50,7 @@ public class hooks {
 		}
 	}
 
-	@AfterTest
+	@After
 	public static void teardown() throws Throwable {
 		if (driver != null) {
 			LoggerReader.info("Closing browser after all tests");
