@@ -61,7 +61,6 @@ public class Login_PF extends BasePageFactory {
 		return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].validationMessage;", element);
 
 
-
 	}
 
 	// Method to get the error message when textbox left empty

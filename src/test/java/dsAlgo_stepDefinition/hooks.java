@@ -9,7 +9,6 @@ import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.LoggerReader;
 import java.io.ByteArrayInputStream;
 
-import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.BeforeAll;
@@ -59,7 +58,6 @@ public class hooks {
 
 	@AfterAll
 	public static void teardown() throws Throwable {
-
 
 		LoggerReader.info("Closing browser after all tests");
 		driverfactory.getDriver().close();

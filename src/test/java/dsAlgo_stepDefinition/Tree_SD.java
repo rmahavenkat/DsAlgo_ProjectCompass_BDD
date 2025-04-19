@@ -154,11 +154,7 @@ public class Tree_SD extends BasePageFactory {
 		assertion.assertEquals(currenturl, Expectedurl);
 	}
 
-<<<<<<< HEAD
-	
 
-=======
->>>>>>> 34fb57b (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
 	@When("The user clicks {string} Terminologies button")
 	public void the_user_clicks_terminologies_button(String string) {
 		tree.clickTerminologies();

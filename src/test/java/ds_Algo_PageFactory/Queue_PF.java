@@ -5,10 +5,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 34fb57b (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
 public class Queue_PF extends BasePageFactory {
 
 	@FindBy(xpath = "//a[contains(text(), 'Data')]")

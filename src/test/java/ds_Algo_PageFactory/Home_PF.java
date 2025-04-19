@@ -2,6 +2,7 @@ package ds_Algo_PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,6 +19,7 @@ public class Home_PF extends BasePageFactory {
 	@FindBy(xpath = "//div[@role='alert']")
 	WebElement warningMsg;
 
+	
 	public void clickBtn() {
 		getstartedBtn.click();
 	}

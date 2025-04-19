@@ -6,9 +6,8 @@
 	<artifactId>DSALgo_ProjectCompass_BDD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
-	
+
 	<dependencies>
-		
 
 		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -111,13 +110,14 @@
 		</dependency>
 
 
+
+
 		<dependency>
 
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.5.0</version>
 		</dependency>
-
 
 		<!--
 		https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
@@ -140,7 +140,5 @@
 
 	</dependencies>
 
-
 	 </project>
-
 
