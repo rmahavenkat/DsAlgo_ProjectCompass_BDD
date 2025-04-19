@@ -4,9 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.time.Duration;
 
 public class driverfactory {
+
 
 	private static ThreadLocal<WebDriver> ThreadLocalDriver = new ThreadLocal<>();
 
@@ -15,12 +17,15 @@ public class driverfactory {
 		WebDriver driver;
 		switch (browser.toLowerCase()) {
 		case "chrome":
+			LoggerReader.info("chrome intialized");
 			driver = new ChromeDriver();
 			break;
 		case "edge":
+			LoggerReader.info("Edge intialized");
 			driver = new EdgeDriver();
 			break;
 		case "firefox":
+			LoggerReader.info("firefox intialized");
 			driver = new FirefoxDriver();
 			break;
 		default:
@@ -48,5 +53,6 @@ public class driverfactory {
 			ThreadLocalDriver.remove();
 		}
 	}
+
 
 }
