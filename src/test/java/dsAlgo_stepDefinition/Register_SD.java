@@ -1,19 +1,17 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ExcelReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.Register_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Register_SD {
+public class Register_SD extends BasePageFactory {
 
-	WebDriver driver = driverfactory.getDriver();
-	public Register_PF register = new Register_PF(driver);
+	public Register_PF register = new Register_PF();
 
 	@Given("The user is on the home page")
 	public void the_user_is_on_the_home_page() {

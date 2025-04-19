@@ -1,16 +1,15 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ExcelReader;
 import ds_Algo_PageFactory.Array_PF;
+import ds_Algo_PageFactory.BasePageFactory;
 import io.cucumber.java.en.*;
 
-public class Array_SD {
-	WebDriver driver = driverfactory.getDriver();
-	Array_PF array = new Array_PF(driver);
+public class Array_SD extends BasePageFactory {
+
+	Array_PF array = new Array_PF();
 
 	@When("The user clicks the \"\"Getting Started\"\" button in Array Panel OR The user select Array item from the drop down menu")
 	public void the_user_clicks_the_getting_started_button_in_array_panel_or_the_user_select_array_item_from_the_drop_down_menu() {
@@ -286,4 +285,5 @@ public class Array_SD {
 		String url1 = "https://dsportalapp.herokuapp.com/home";
 		driver.navigate().to(url1);
 	}
+	
 }

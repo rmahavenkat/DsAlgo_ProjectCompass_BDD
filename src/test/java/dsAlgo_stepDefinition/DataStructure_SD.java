@@ -1,25 +1,21 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ExcelReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.DataStructure_PF;
-import ds_Algo_PageFactory.Login_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DataStructure_SD {
-	WebDriver driver = driverfactory.getDriver();
-	public Login_PF login = new Login_PF(driver);
+public class DataStructure_SD extends BasePageFactory {
+
 	Assertion assertion = new Assertion();
-	public DataStructure_PF datastruct = new DataStructure_PF(driver);
+	public DataStructure_PF datastruct = new DataStructure_PF();
 
 	@Given("The user is in the Home page after logged in")
 	public void the_user_is_in_the_home_page_after_logged_in() throws IOException {
-
 		String currenturl = driver.getCurrentUrl();
 		String expectedurl = "https://dsportalapp.herokuapp.com/home";
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
