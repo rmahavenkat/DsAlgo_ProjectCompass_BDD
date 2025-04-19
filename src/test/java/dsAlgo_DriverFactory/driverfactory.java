@@ -6,11 +6,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import dsAlgo_Utilities.ConfigReader;
+import dsAlgo_Utilities.LoggerReader;
+
 import java.time.Duration;
 
 public class driverfactory {
 
-	public static WebDriver driver;
+	//public static WebDriver driver;
 	public static ConfigReader configFileReader = new ConfigReader();
 	private static ThreadLocal<WebDriver> ThreadLocalDriver = new ThreadLocal<>();
 
@@ -20,12 +22,15 @@ public class driverfactory {
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
+			LoggerReader.info("chrome intialized");
 			driver = new ChromeDriver();
 			break;
 		case "edge":
+			LoggerReader.info("Edge intialized");
 			driver = new EdgeDriver();
 			break;
 		case "firefox":
+			LoggerReader.info("firefox intialized");
 			driver = new FirefoxDriver();
 			break;
 		default:
@@ -63,8 +68,8 @@ public class driverfactory {
 	}
 
 	// for configreader access
-	public static ConfigReader configReader() {
+	/*public static ConfigReader configReader() {
 		return configFileReader;
-	}
+	}*/
 
 }

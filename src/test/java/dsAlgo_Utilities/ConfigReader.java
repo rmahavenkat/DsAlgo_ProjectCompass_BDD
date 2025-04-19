@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-	private static String browserType = null;
+	//private static String browserType = null;
+	private static ThreadLocal<String>threadlocalbrowsertype=new ThreadLocal<>();
 	private static Properties properties;
 	private final static String propertyFilePath = "src/test/resources/dsAlgo_Configurations/config.properties";
 
@@ -36,28 +37,35 @@ public class ConfigReader {
 
 	}
 
-	// Get the url details from config properties file
-	public static String getApplicationUrl() {
-		String url = properties.getProperty("url");
+	// Get the details from config properties file
+	/*public static String getConfigproperty(String key) {
+		String value = properties.getProperty(key);
+		if (value != null)
+			return value;
+		else
+			throw new RuntimeException("value is not found in config.properties file.");
+
+	}*/
+    public static String getApplicationUrl() {
+    	String url = properties.getProperty("url");
 		if (url != null)
 			return url;
 		else
 			throw new RuntimeException("url is not found in config.properties file.");
 
-	}
-
+    }
 	public static void setBrowserType(String browser) {
 
-		browserType = browser;
+		threadlocalbrowsertype.set(browser);
 
 	}
 
 	// To get the browsers from testng.xml
 	public static String getBrowserType() throws Throwable {
 
-		if (browserType != null) {
+		if (threadlocalbrowsertype.get() != null) {
 
-			return browserType;
+			return threadlocalbrowsertype.get();
 		} else {
 
 			throw new RuntimeException("browser is not specified in the testng.xml");
