@@ -2,7 +2,6 @@ package ds_Algo_PageFactory;
 
 import java.util.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -58,11 +57,7 @@ public class Login_PF extends BasePageFactory {
 
 	// Method to validate logged in message
 	public String getValidationMessage(WebElement element) {
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f451053 (added chaintest chainLP and modified Login page and added chain test Plugin in testrunner,pom)
 		return (String) ((JavascriptExecutor) driver)
 				.executeScript("return arguments[0].validationMessage;", element);
 
