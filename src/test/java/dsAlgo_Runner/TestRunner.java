@@ -6,7 +6,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.LoggerReader;
-import dsAlgo_stepDefinition.hooks;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -34,7 +33,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		ConfigReader.setBrowserType(browser);
 
 	}
-
 
 	@Override
 	@DataProvider(parallel = false)

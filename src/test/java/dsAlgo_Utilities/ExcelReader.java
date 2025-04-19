@@ -1,28 +1,18 @@
 package dsAlgo_Utilities;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+public class ExcelReader {
 
 
-	public class ExcelReader {
-
-	
-
-	//Figure out reusable method and try to read from rowname to read whole row.
-	
-	//	public static String getCellValue(String SheetName) throws IOException { -> getCellValue("Register") or getCellValue("Login") 
+	// public static String getCellValue(String SheetName) throws IOException { ->
+	// getCellValue("Register") or getCellValue("Login")
 
 
 	public static String getusernameregister() throws IOException {
@@ -32,7 +22,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 		FileInputStream Fis = null;
 		Fis = new FileInputStream(excelFile);
 		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet // XSSFSheet sheet = workbook.getSheet(SheetName);
+			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet // XSSFSheet sheet =
+															// workbook.getSheet(SheetName);
 			Row newRow = sheet.getRow(1);// row we want to write
 			Cell newCell = newRow.getCell(0);// in which we want to write
 			currentcell = newCell.getStringCellValue();
@@ -175,5 +166,4 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 		}
 		return currentcell;
 	}
-	}
-
+}

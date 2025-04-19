@@ -8,7 +8,6 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-
 	static ThreadLocal<String> threadlocalbrowsertype = new ThreadLocal<>();
 
 	private static Properties properties;
@@ -31,7 +30,6 @@ public class ConfigReader {
 
 	}
 
-
 	// Get the url details from config properties file
 	// you have to write common method to read the config.properties file key.
 	public static String getApplicationUrl() { // public static String getApplication(Sting key)
@@ -42,7 +40,8 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("url is not found in config.properties file.");
 
-    }
+	}
+
 	public static void setBrowserType(String browser) {
 
 		threadlocalbrowsertype.set(browser);
@@ -50,15 +49,12 @@ public class ConfigReader {
 
 	public static String getBrowserType() throws Throwable {
 
-		if (threadlocalbrowsertype.get() != null)
-		{
+		if (threadlocalbrowsertype.get() != null) {
 			return threadlocalbrowsertype.get();
-		} 
-		else 
-		{
+		} else {
 
 			throw new RuntimeException("browser is not specified in the testng.xml");
 		}
 	}
-	
+
 }
