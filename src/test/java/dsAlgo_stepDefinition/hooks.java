@@ -52,7 +52,6 @@ public class hooks {
 
 	@AfterAll
 	public static void teardown() throws Throwable {
-
 		LoggerReader.info("Closing browser after all tests");
 		driverfactory.getDriver().close();
 	}
