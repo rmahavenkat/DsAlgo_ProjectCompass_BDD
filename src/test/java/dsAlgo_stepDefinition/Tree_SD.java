@@ -154,8 +154,6 @@ public class Tree_SD extends BasePageFactory {
 		assertion.assertEquals(currenturl, Expectedurl);
 	}
 
-	
-
 	@When("The user clicks {string} Terminologies button")
 	public void the_user_clicks_terminologies_button(String string) {
 		tree.clickTerminologies();

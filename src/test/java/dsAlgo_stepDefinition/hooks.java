@@ -42,7 +42,7 @@ public class hooks {
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
-			
+
 			// Extent reports or saving file
 			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
@@ -52,9 +52,7 @@ public class hooks {
 
 	@AfterAll
 	public static void teardown() throws Throwable {
-
 		LoggerReader.info("Closing browser after all tests");
 		driverfactory.getDriver().close();
 	}
-
 }
