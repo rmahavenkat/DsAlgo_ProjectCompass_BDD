@@ -1,13 +1,11 @@
 package ds_Algo_PageFactory;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.Assertion;
 
-public class LinkedList_PF {
-	WebDriver driver;
+public class LinkedList_PF extends BasePageFactory {
+
 	@FindBy(xpath = "//div[@class='row row-cols-1 row-cols-md-3 g-4']/div[3]/div/div/a[text()='Get Started']")
 	WebElement getstartedbutton;
 	@FindBy(linkText = "Introduction")
@@ -28,11 +26,6 @@ public class LinkedList_PF {
 	WebElement insertionButton;
 	@FindBy(linkText = "Deletion")
 	WebElement deletionButton;
-
-	public LinkedList_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 
 	public void clickGetStartedButton() {
 		getstartedbutton.click();

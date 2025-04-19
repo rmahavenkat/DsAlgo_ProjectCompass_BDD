@@ -1,12 +1,9 @@
 package ds_Algo_PageFactory;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Graph_PF {
-	WebDriver driver;
+public class Graph_PF extends BasePageFactory {
 	@FindBy(xpath = "//div[@class='row row-cols-1 row-cols-md-3 g-4']/div[7]/div/div/a[text()='Get Started']")
 	WebElement getStartButton;
 	@FindBy(xpath = "//div/ul/a[text()='Graph']")
@@ -21,13 +18,6 @@ public class Graph_PF {
 	WebElement graphRepresentationlink;
 	@FindBy(xpath = "//*[@id='output']")
 	WebElement output;
-
-	public Graph_PF(WebDriver driver) {
-
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-
-	}
 
 	public void clickGetStartButton() {
 		getStartButton.click();

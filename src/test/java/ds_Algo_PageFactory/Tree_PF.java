@@ -1,13 +1,10 @@
 package ds_Algo_PageFactory;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Tree_PF {
+public class Tree_PF extends BasePageFactory {
 
-	WebDriver driver;
 	@FindBy(xpath = "//div[@class='row row-cols-1 row-cols-md-3 g-4']/div[6]/div/div/a[text()='Get Started']")
 	WebElement getstartbutton;
 	@FindBy(linkText = "Overview of Trees")
@@ -38,13 +35,6 @@ public class Tree_PF {
 	WebElement binarysearchtreebutton;
 	@FindBy(xpath = "//a[text()='Implementation Of BST']")
 	WebElement implementationofbstbutton;
-
-	public Tree_PF(WebDriver driver) {
-
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-
-	}
 
 	public void clickGetStartButton() {
 		getstartbutton.click();
