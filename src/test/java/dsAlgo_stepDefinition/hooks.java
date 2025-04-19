@@ -29,6 +29,7 @@ public class hooks {
 		LoggerReader.info("browser initialized");
 		LoggerReader.info("browser opened get driver");
 		driverfactory.getDriver().get(ConfigReader.getApplicationUrl());
+	}
 
 	@AfterStep
 	public void afterstep(Scenario scenario) throws IOException {
