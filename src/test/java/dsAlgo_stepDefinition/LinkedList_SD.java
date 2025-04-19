@@ -7,7 +7,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34fb57b (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
 public class LinkedList_SD extends BasePageFactory {
 	
 	Assertion assertion = new Assertion();

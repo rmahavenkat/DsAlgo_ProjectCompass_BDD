@@ -5,8 +5,10 @@
 	<groupId>DsAlgo_ProjectCompass_BDD</groupId>
 	<artifactId>DSALgo_ProjectCompass_BDD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	
+	
 	<dependencies>
+		
 
 		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -101,19 +103,24 @@
 
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
+		<dependency>
+
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.1.2</version>
 		</dependency>
 
-<dependency>
+
+		<dependency>
+
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.5.0</version>
 		</dependency>
-	
-		<!--https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -121,7 +128,10 @@
 			<version>3.5.3</version>
 		</dependency>
 
-		<!--https://mvnrepository.com/artifact/com.aventstack/chaintest-cucumber-jvm -->
+
+		<!--
+		https://mvnrepository.com/artifact/com.aventstack/chaintest-cucumber-jvm -->
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>chaintest-cucumber-jvm</artifactId>
@@ -130,5 +140,7 @@
 
 	</dependencies>
 
+
 	 </project>
+
 

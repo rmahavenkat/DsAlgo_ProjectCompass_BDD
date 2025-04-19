@@ -64,5 +64,4 @@ public class hooks {
 		LoggerReader.info("Closing browser after all tests");
 		driverfactory.getDriver().close();
 	}
-
 }

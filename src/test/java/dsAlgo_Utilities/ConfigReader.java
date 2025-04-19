@@ -46,7 +46,6 @@ public class ConfigReader {
 	public static void setBrowserType(String browser) {
 
 		threadlocalbrowsertype.set(browser);
-
 	}
 
 	public static String getBrowserType() throws Throwable {

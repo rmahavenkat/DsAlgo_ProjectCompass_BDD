@@ -3,10 +3,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <suite name="Suite" parallel="tests" thread-count="3">
 =======
 <suite name="Suite" parallel="tests" thread-count="3"> <!-- thread-count is for each browser to open in different driver-->
 >>>>>>> 1280b61 (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
+=======
+<suite name="Suite" parallel="tests" thread-count="3"> <!-- thread-count is for each browser to open in different driver-->
+>>>>>>> 34fb57b (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
   <test name="edgetest">
 	<parameter name="browser" value="edge" />
     <classes>

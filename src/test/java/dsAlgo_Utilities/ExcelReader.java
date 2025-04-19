@@ -16,16 +16,22 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	public class ExcelReader {
 
 	
 =======
+=======
+>>>>>>> 34fb57b (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
 	//Figure out reusable method and try to read from rowname to read whole row.
 	
 	//	public static String getCellValue(String SheetName) throws IOException { -> getCellValue("Register") or getCellValue("Login") 
 
+<<<<<<< HEAD
 >>>>>>> 1280b61 (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
+=======
+>>>>>>> 34fb57b (modified all files,added basepagefactory,hooks,driver factory,config reader,test runner etc)
 	public static String getusernameregister() throws IOException {
 		String currentcell = null;
 		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
