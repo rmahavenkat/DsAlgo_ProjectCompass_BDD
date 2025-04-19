@@ -2,6 +2,7 @@ package ds_Algo_PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -17,11 +18,10 @@ public class Home_PF extends BasePageFactory {
 	WebElement array;
 	@FindBy(xpath = "//div[@role='alert']")
 	WebElement warningMsg;
-
+	
 	public void clickBtn() {
 		getstartedBtn.click();
 	}
-
 	public void clickdropdown() {
 		dropdownBtn.click();
 	}
@@ -37,7 +37,6 @@ public class Home_PF extends BasePageFactory {
 	public void clickarray() {
 		array.click();
 	}
-
 	public void warning_msg() {
 		warningMsg.getText();
 	}
