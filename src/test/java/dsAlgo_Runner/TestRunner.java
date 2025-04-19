@@ -1,11 +1,9 @@
 package dsAlgo_Runner;
 
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.LoggerReader;
 import dsAlgo_stepDefinition.hooks;
@@ -20,32 +18,29 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:" }, // reporting purpose
 
 		dryRun = false, monochrome = true, // console output color
-		 tags = "@HomeScenario", // tags from feature file
+
+		// tags = "@HomeScenario", // tags from feature file
+
 		features = { "src/test/resources/dsAlgo_FeatureFiles" }, // location of feature files
 		glue = { "dsAlgo_stepDefinition" }) // location of step definition files
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeTest
-	@Parameters("browser")
-
+	@Parameters({ "browser" })
 	public void defineBrowser(@Optional("chrome") String browser) throws Throwable {
-		LoggerReader.info("Browser opened before tests");
-		hooks.isDriverInitialized=false;
+
+
+		LoggerReader.info("browser opened in runner");
 		ConfigReader.setBrowserType(browser);
-		driverfactory.getDriver();
-		//driverfactory.initdriver(browser);// get new driver instance
+
 	}
 
-	/*@AfterTest
-	public static void teardown() throws Throwable {
-		LoggerReader.info("Closing browser after all tests");
-		driverfactory.quitDriver();
-	}*/
 
 	@Override
 	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
+
 		return super.scenarios();
 
 	}

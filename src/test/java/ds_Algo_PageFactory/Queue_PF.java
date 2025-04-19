@@ -2,13 +2,11 @@ package ds_Algo_PageFactory;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Queue_PF {
-	public WebDriver driver;
+public class Queue_PF extends BasePageFactory {
+
 	@FindBy(xpath = "//a[contains(text(), 'Data')]")
 	WebElement datastdrdown;
 	@FindBy(xpath = "//a[contains(@href, 'queue')]")
@@ -25,11 +23,6 @@ public class Queue_PF {
 	WebElement runbtn;
 	@FindBy(id = "output")
 	WebElement validoutputmsg;
-
-	public Queue_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 
 	public void alertmessage() {
 		try {

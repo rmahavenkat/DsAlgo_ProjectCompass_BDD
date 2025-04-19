@@ -1,16 +1,13 @@
 package dsAlgo_stepDefinition;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-
-import dsAlgo_DriverFactory.driverfactory;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.Tree_PF;
 import io.cucumber.java.en.*;
 
-public class Tree_SD {
+public class Tree_SD extends BasePageFactory {
 
-	WebDriver driver = driverfactory.getDriver();
-	public Tree_PF tree = new Tree_PF(driver);
+	public Tree_PF tree = new Tree_PF();
 	Assertion assertion = new Assertion();
 
 	@When("The user clicks the {string} button in Tree Panel OR the user select Tree item from the drop down menu")
@@ -156,12 +153,6 @@ public class Tree_SD {
 		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
 	}
-
-	/*
-	 * @When("The user clicks {string} Practice Questions button") public void
-	 * the_user_clicks_practice_questions_button(String string) {
-	 * tree.clickPracticeQuestion(); }
-	 */
 
 	@When("The user clicks {string} Terminologies button")
 	public void the_user_clicks_terminologies_button(String string) {

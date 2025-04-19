@@ -1,21 +1,16 @@
 package dsAlgo_stepDefinition;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
-import ds_Algo_PageFactory.DataStructure_PF;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.LinkedList_PF;
-import ds_Algo_PageFactory.Login_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LinkedList_SD {
-	WebDriver driver = driverfactory.getDriver();
+public class LinkedList_SD extends BasePageFactory {
+	
 	Assertion assertion = new Assertion();
-	public Login_PF login = new Login_PF(driver);
-	public DataStructure_PF datastruct = new DataStructure_PF(driver);
-	public LinkedList_PF linkedlist = new LinkedList_PF(driver);
+	public LinkedList_PF linkedlist = new LinkedList_PF();
 
 	@Given("The user is in the Home page after logged in Linked List")
 	public void the_user_is_in_the_home_page_after_logged_in_linked_list() {
@@ -101,4 +96,5 @@ public class LinkedList_SD {
 	public void the_user_clicks_deletion_button(String string) {
 		linkedlist.clickDeletionButton();
 	}
+	
 }

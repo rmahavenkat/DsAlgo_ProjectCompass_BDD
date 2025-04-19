@@ -32,7 +32,7 @@ Feature: Testing whether the user is navigating to Linked List Page and perform 
   @TC149
   Scenario: Verify that user receives error when click on Run button without entering code
     Given The user is in the tryEditor page
-    When The user clicks the Run button without entering the code in the Editor 
+    When The user clicks the Run button without entering the code in the Editor
     Then The user should able to see an error message in alert window
 
   @TC150

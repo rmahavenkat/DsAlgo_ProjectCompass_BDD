@@ -1,20 +1,18 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ExcelReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.Login_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Login_SD {
-	WebDriver driver = driverfactory.getDriver();
+public class Login_SD extends BasePageFactory{
 	Assertion assertion = new Assertion();
-	public Login_PF login = new Login_PF(driver);
+	public Login_PF login = new Login_PF();
 
 	@Given("The user is on the DS Algo Home Page")
 	public void the_user_is_on_the_ds_algo_home_page() throws InterruptedException {
