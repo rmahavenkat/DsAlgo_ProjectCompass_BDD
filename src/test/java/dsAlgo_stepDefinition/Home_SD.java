@@ -2,22 +2,19 @@ package dsAlgo_stepDefinition;
 
 import java.util.Arrays;
 import java.util.List;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.asserts.Assertion;
-
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.Home_PF;
 import io.cucumber.java.en.*;
 
-public class Home_SD {
-	WebDriver driver = driverfactory.getDriver();
-	Home_PF Home = new Home_PF(driver);
+public class Home_SD extends BasePageFactory {
+
+	Home_PF Home = new Home_PF();
 
 	@Given("The user has browser open")
 	public void the_user_has_browser_open() {
-
 		System.out.println("brower is open");
 	}
 
@@ -37,7 +34,6 @@ public class Home_SD {
 
 	@Given("The user is on the DS Algo Portal")
 	public void the_user_is_on_the_ds_algo_portal() {
-
 		String currenturl = driver.getCurrentUrl();
 		String Expectedurl = "https://dsportalapp.herokuapp.com/";
 		Assertion assertion = new Assertion();
@@ -46,7 +42,6 @@ public class Home_SD {
 
 	@When("The user clicks the {string} button")
 	public void the_user_clicks_the_button(String string) {
-
 		Home.clickBtn();
 	}
 

@@ -1,14 +1,12 @@
 package ds_Algo_PageFactory;
 
 import java.util.NoSuchElementException;
-
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Login_PF {
-	WebDriver driver;
+public class Login_PF extends BasePageFactory {
+
 	@FindBy(linkText = "Sign in")
 	WebElement signin;
 	@FindBy(id = "id_username")
@@ -25,12 +23,6 @@ public class Login_PF {
 	WebElement logoutButton;
 	@FindBy(xpath = "//div[@class='alert alert-primary']")
 	WebElement successLogoutMesssage;
-
-	// Method to initialize the driver and elements
-	public Login_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 
 	// Method to click Signin
 	public void clickSignin() {
@@ -65,8 +57,9 @@ public class Login_PF {
 
 	// Method to validate logged in message
 	public String getValidationMessage(WebElement element) {
-		return (String) ((org.openqa.selenium.JavascriptExecutor) driver)
+		return (String) ((JavascriptExecutor) driver)
 				.executeScript("return arguments[0].validationMessage;", element);
+
 	}
 
 	// Method to get the error message when textbox left empty

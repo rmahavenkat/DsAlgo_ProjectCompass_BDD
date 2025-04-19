@@ -1,19 +1,16 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
-import dsAlgo_Utilities.ConfigReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.Stack_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Stack_SD {
+public class Stack_SD extends BasePageFactory {
 
-	WebDriver driver = driverfactory.getDriver();
-	public Stack_PF stack = new Stack_PF(driver);
+	public Stack_PF stack = new Stack_PF();
 
 	@Given("The user is in the Home page after Sign in")
 	public void the_user_is_in_the_home_page_after_sign_in() throws IOException {
@@ -168,7 +165,7 @@ public class Stack_SD {
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/practice";
 		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-		String url = ConfigReader.getApplicationUrl();
+		String url = "https://dsportalapp.herokuapp.com/home";
 		driver.navigate().to(url);
 	}
 }

@@ -9,6 +9,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader {
 
+	//Figure out reusable method and try to read from rowname to read whole row.
+	
+	//	public static String getCellValue(String SheetName) throws IOException { -> getCellValue("Register") or getCellValue("Login") 
+
 	public static String getusernameregister() throws IOException {
 		String currentcell = null;
 		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
@@ -16,7 +20,7 @@ public class ExcelReader {
 		FileInputStream Fis = null;
 		Fis = new FileInputStream(excelFile);
 		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet
+			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet // XSSFSheet sheet = workbook.getSheet(SheetName);
 			Row newRow = sheet.getRow(1);// row we want to write
 			Cell newCell = newRow.getCell(0);// in which we want to write
 			currentcell = newCell.getStringCellValue();

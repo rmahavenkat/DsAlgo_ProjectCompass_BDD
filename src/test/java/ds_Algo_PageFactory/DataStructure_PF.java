@@ -2,13 +2,11 @@ package ds_Algo_PageFactory;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class DataStructure_PF {
-	WebDriver driver;
+public class DataStructure_PF extends BasePageFactory {
+
 	@FindBy(xpath = "//*[text()='Data Structures-Introduction']/../a")
 	WebElement getstartedbutton;
 	@FindBy(linkText = "Time Complexity")
@@ -25,11 +23,6 @@ public class DataStructure_PF {
 	WebElement runButton;
 	@FindBy(id = "output")
 	WebElement output;
-
-	public DataStructure_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 
 	public void clickGetStartedButton() {
 		getstartedbutton.click();

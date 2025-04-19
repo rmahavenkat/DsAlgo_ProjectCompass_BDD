@@ -1,14 +1,11 @@
 package ds_Algo_PageFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Register_PF {
-
-	public WebDriver driver;
+public class Register_PF extends BasePageFactory {
 
 	@FindBy(id = "id_username")
 	WebElement username;
@@ -28,11 +25,6 @@ public class Register_PF {
 	WebElement signout;
 	@FindBy(xpath = "//div[contains(text(), 'Logged ')]")
 	WebElement logoutmessage;
-
-	public Register_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 
 	// Going into the Register form
 	public void Register() {
