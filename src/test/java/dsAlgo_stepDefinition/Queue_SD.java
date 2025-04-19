@@ -1,18 +1,17 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ExcelReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.Queue_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Queue_SD {
-	WebDriver driver = driverfactory.getDriver();
-	public Queue_PF queue = new Queue_PF(driver);
+public class Queue_SD extends BasePageFactory {
+	
+	public Queue_PF queue = new Queue_PF();
 
 	@When("The user clicks the {string} button in Queue Panel OR The user select Queue item from the drop down menu")
 	public void the_user_clicks_the_button_in_queue_panel_or_the_user_select_queue_item_from_the_drop_down_menu(

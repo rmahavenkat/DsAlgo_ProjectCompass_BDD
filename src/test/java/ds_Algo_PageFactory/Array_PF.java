@@ -3,18 +3,10 @@ package ds_Algo_PageFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Array_PF {
-	WebDriver driver;
-
-	public Array_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
+public class Array_PF extends BasePageFactory {
 
 	@FindBy(xpath = "//a[normalize-space()='Sign in']")
 	WebElement signBtn;

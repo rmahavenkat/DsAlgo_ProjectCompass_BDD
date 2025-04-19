@@ -1,26 +1,19 @@
 package dsAlgo_stepDefinition;
 
 import java.io.IOException;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.asserts.Assertion;
-
-import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ExcelReader;
+import ds_Algo_PageFactory.BasePageFactory;
 import ds_Algo_PageFactory.DataStructure_PF;
 import ds_Algo_PageFactory.Graph_PF;
-import ds_Algo_PageFactory.Login_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Graph_SD {
+public class Graph_SD extends BasePageFactory {
 
-	WebDriver driver = driverfactory.getDriver();
-	public Login_PF login = new Login_PF(driver);
-	public DataStructure_PF datastruct = new DataStructure_PF(driver);
-	public Graph_PF graph = new Graph_PF(driver);
-
+	public DataStructure_PF datastruct = new DataStructure_PF();
+	public Graph_PF graph = new Graph_PF();
 	Assertion assertion = new Assertion();
 
 	@When("The user clicks the {string} button in Graph Panel or The user select Graph item from the drop down menu")
@@ -127,16 +120,6 @@ public class Graph_SD {
 		graph.clickTryHereButton();
 	}
 
-	/*
-	 * @Then("The user should be redirected to a page having an try Editor with a Run button to test"
-	 * ) public void
-	 * the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test
-	 * () { String currenturl = driver.getCurrentUrl(); String expectedurl =
-	 * "https://dsportalapp.herokuapp.com/tryEditor";
-	 * assertion.assertEquals(currenturl, expectedurl,
-	 * "https://dsportalapp.herokuapp.com/tryEditor"); }
-	 */
-
 	@When("The user clicks the Run Button without entering the code in the Editor	 of Graph Representations")
 	public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor_of_graph_representations() {
 		graph.clickRunButton();
@@ -147,7 +130,6 @@ public class Graph_SD {
 			throws IOException, InterruptedException {
 		driver.navigate().back();
 		datastruct.clickTryHereButton();
-		// String invalidcode=ConfigReader.getinvalidcode();
 		String invalidcode = ExcelReader.getinvalidpythoncode();
 		datastruct.enterText(invalidcode);
 		datastruct.clickRunButton();

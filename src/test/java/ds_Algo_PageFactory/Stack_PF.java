@@ -2,14 +2,11 @@ package ds_Algo_PageFactory;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Stack_PF {
+public class Stack_PF extends BasePageFactory {
 
-	public WebDriver driver;
 	@FindBy(xpath = "//a[contains(text(), 'Sign in')]")
 	WebElement signin;
 	@FindBy(id = "id_username")
@@ -38,11 +35,6 @@ public class Stack_PF {
 	WebElement runbtn;
 	@FindBy(id = "output")
 	WebElement validoutputmsg;
-
-	public Stack_PF(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
 
 	public void alertmessage() {
 		try {
