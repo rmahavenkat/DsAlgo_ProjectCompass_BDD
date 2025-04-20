@@ -30,8 +30,6 @@ public class ExcelReader {
 			}
 
 			return cell.toString();
-
-
 		}
 	}
 

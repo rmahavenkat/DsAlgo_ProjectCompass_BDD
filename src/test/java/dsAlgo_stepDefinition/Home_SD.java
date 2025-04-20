@@ -34,6 +34,7 @@ public class Home_SD extends BasePageFactory {
 
 	@Given("The user is on the DS Algo Portal")
 	public void the_user_is_on_the_ds_algo_portal() {
+
 		base.dsAlgoPageUrl();
 	}
 

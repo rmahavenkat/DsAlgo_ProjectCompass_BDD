@@ -35,7 +35,8 @@ public class ConfigReader {
 		if (value != null)
 			return value;
 		else
-			throw new RuntimeException("Key '" + key + "' not found in config.properties file.");
+			throw new RuntimeException("Key" + key + "not found in config.properties file.");
+
 	}
 
 	public static void setBrowserType(String browser) {
