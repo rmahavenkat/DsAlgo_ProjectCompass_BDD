@@ -43,7 +43,7 @@ public class ConfigReader {
 	}
 
 	public static String getBrowserType() throws Throwable {
-
+    
 		if (threadlocalbrowsertype.get() != null) {
 			return threadlocalbrowsertype.get();
 		} else {
