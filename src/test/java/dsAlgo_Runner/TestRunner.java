@@ -24,10 +24,8 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	@BeforeTest
 	@Parameters({ "browser" })
 	public void defineBrowser(@Optional("chrome") String browser) throws Throwable {
-
 		LoggerReader.info("browser opened in runner");
 		ConfigReader.setBrowserType(browser);
-
 	}
 
 	@Override

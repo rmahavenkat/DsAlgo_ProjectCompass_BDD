@@ -33,9 +33,7 @@ public class hooks {
 
 	@AfterStep
 	public void afterstep(Scenario scenario) throws IOException {
-
 		if (scenario.isFailed()) {
-
 			LoggerReader.error("Steps Failed, Taking Screenshot");
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
@@ -52,6 +50,7 @@ public class hooks {
 
 	@AfterAll
 	public static void teardown() throws Throwable {
+
 		LoggerReader.info("Closing browser after all tests");
 		driverfactory.getDriver().close();
 	}

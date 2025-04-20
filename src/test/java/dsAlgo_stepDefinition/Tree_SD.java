@@ -44,6 +44,7 @@ public class Tree_SD extends BasePageFactory {
 		tree.treeLinksUrl(string);
 	}
 
+
 	@When("The user clicks {string} Terminologies button")
 	public void the_user_clicks_terminologies_button(String string) {
 		tree.clickTerminologies();

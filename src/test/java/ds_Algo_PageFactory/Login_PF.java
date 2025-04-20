@@ -57,7 +57,9 @@ public class Login_PF extends BasePageFactory {
 
 	// Method to validate logged in message
 	public String getValidationMessage(WebElement element) {
+
 		return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].validationMessage;", element);
+
 
 	}
 

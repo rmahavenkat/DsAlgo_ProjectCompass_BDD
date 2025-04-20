@@ -13,8 +13,8 @@ public class ExcelReader {
 	private static final String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
 
 	public static String getCellValue(String sheetName, int rowNum, int colNum) throws IOException {
-		try (FileInputStream fis = new FileInputStream(new File(path)); 
-				XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
+
+		try (FileInputStream fis = new FileInputStream(new File(path)); XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
 
 			XSSFSheet sheet = workbook.getSheet(sheetName);
 			if (sheet == null) {

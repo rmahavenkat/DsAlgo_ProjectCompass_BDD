@@ -16,10 +16,13 @@ public class BasePageFactory {
 	public void application() {
 		String url = ConfigReader.getConfig("url");
 		driver.navigate().to(url);
+
 	}
 
 	public void navToHomePageUrl() {
+
 		driver.navigate().to("https://dsportalapp.herokuapp.com/home");
+    
 	}
 
 	public void dsAlgoPageUrl() {
@@ -34,5 +37,6 @@ public class BasePageFactory {
 	public void navigateGraph() {
 		driver.navigate().to("https://dsportalapp.herokuapp.com/graph/");
 	}
-
+	
+	
 }
