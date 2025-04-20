@@ -3,8 +3,6 @@ Feature: Testing whether the user is navigating to Linked List Page and perform 
 
   Background: 
             The user sign in to dsAlgo Portal
-
-
   @TC145
   Scenario: Verify that user is able to navigate to "Linked List" Data Structure page
     Given The user is in the Home page after logged in Linked List
