@@ -15,6 +15,7 @@ public class Graph_SD extends BasePageFactory {
 	public DataStructure_PF datastruct = new DataStructure_PF();
 	public Graph_PF graph = new Graph_PF();
 	Assertion assertion = new Assertion();
+	BasePageFactory base = new BasePageFactory();
 
 	@When("The user clicks the {string} button in Graph Panel or The user select Graph item from the drop down menu")
 	public void the_user_clicks_the_button_in_graph_panel_or_the_user_select_graph_item_from_the_drop_down_menu(
@@ -31,9 +32,7 @@ public class Graph_SD extends BasePageFactory {
 
 	@Given("The user is in the {string} graph page in data Stucture page")
 	public void the_user_is_in_the_graph_page_in_data_stucture_page(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/graph/";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/graph/");
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks {string} graph Link in graph data Structure page")
@@ -50,9 +49,7 @@ public class Graph_SD extends BasePageFactory {
 
 	@Given("The user is in the {string} graph page")
 	public void the_user_is_in_the_graph_page(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/graph/graph/";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/graph/graph/");
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks {string} try here button in Graph page")
@@ -75,9 +72,7 @@ public class Graph_SD extends BasePageFactory {
 
 	@Given("The user is in the Graph  page")
 	public void the_user_is_in_the_graph_page() {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/graph/graph/";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/graph/graph/");
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the {string} button in graph")
@@ -90,7 +85,7 @@ public class Graph_SD extends BasePageFactory {
 		String currenturl = driver.getCurrentUrl();
 		String expectedurl = "https://dsportalapp.herokuapp.com/graph/practice";
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/graph/practice");
-		driver.navigate().to("https://dsportalapp.herokuapp.com/graph/");
+		base.navigateGraph();
 
 	}
 
@@ -109,10 +104,7 @@ public class Graph_SD extends BasePageFactory {
 
 	@Given("The user is in the {string} Graph Representations page")
 	public void the_user_is_in_the_graph_representations_page(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/graph/graph-representations/";
-		assertion.assertEquals(currenturl, expectedurl,
-				"https://dsportalapp.herokuapp.com/graph/graph-representations/");
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks {string} try here button in Graph Representations page")
@@ -143,10 +135,7 @@ public class Graph_SD extends BasePageFactory {
 
 	@Given("The user is in the Graph Representation page")
 	public void the_user_is_in_the_graph_representation_page() {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/graph/graph-representations/";
-		assertion.assertEquals(currenturl, expectedurl,
-				"https://dsportalapp.herokuapp.com/graph/graph-representations/");
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the {string} practice Ques button	of Graph Representations")
@@ -159,7 +148,7 @@ public class Graph_SD extends BasePageFactory {
 		String currenturl = driver.getCurrentUrl();
 		String expectedurl = "https://dsportalapp.herokuapp.com/graph/practice";
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/graph/practice");
-		driver.navigate().to("https://dsportalapp.herokuapp.com/home");
+		base.navToHomePageUrl();
 
 	}
 

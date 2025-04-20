@@ -29,8 +29,6 @@ public class ConfigReader {
 
 	}
 
-	// Get the url details from config properties file
-
 	public static String getConfig(String key) {
 		String value = properties.getProperty(key);
 		if (value != null)
@@ -44,7 +42,7 @@ public class ConfigReader {
 	}
 
 	public static String getBrowserType() throws Throwable {
-
+    
 		if (threadlocalbrowsertype.get() != null) {
 			return threadlocalbrowsertype.get();
 		} else {
