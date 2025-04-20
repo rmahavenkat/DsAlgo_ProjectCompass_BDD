@@ -5,10 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import dsAlgo_Utilities.LoggerReader;
+
 import java.time.Duration;
 
 public class driverfactory {
-
 
 	private static ThreadLocal<WebDriver> ThreadLocalDriver = new ThreadLocal<>();
 
@@ -53,6 +54,5 @@ public class driverfactory {
 			ThreadLocalDriver.remove();
 		}
 	}
-
 
 }

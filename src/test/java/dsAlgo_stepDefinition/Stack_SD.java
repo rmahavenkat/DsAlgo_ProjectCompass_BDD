@@ -11,19 +11,17 @@ import io.cucumber.java.en.When;
 public class Stack_SD extends BasePageFactory {
 
 	public Stack_PF stack = new Stack_PF();
+	Assertion assertion = new Assertion();
+	BasePageFactory base = new BasePageFactory();
 
 	@Given("The user is in the Home page after Sign in")
 	public void the_user_is_in_the_home_page_after_sign_in() throws IOException {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/home";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("{string}{string}{string}")
 	public void string_string_string(String string, String string2, String string3) throws InterruptedException {
 		stack.clickdata();
-		Thread.sleep(1000);
 		System.out.println("user logged in");
 		stack.clickstack();
 	}
@@ -32,18 +30,12 @@ public class Stack_SD extends BasePageFactory {
 	public void the_user_be_directed_to_data_structure_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/";
-		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-
 	}
 
 	@Given("The user is in the {string} page after Sign in")
 	public void the_user_is_in_the_page_after_sign_in(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
-
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks {string} button")
@@ -54,9 +46,7 @@ public class Stack_SD extends BasePageFactory {
 	@Then("The user should be redirected to {string} page")
 	public void the_user_should_be_redirected_to_page(String string) {
 		String currenturl = driver.getCurrentUrl();
-
 		String url = "";
-
 		switch (string) {
 		case "Operations in Stack":
 			url = "operations-in-stack/";
@@ -69,39 +59,12 @@ public class Stack_SD extends BasePageFactory {
 			break;
 		}
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/" + url;
-		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-
 	}
 
 	@Given("The user is on the {string} page")
 	public void the_user_is_on_the_page(String string) {
-		String currenturl = driver.getCurrentUrl();
-
-		String url = "";
-
-		switch (string) {
-		case "Operations in Stack":
-			url = "operations-in-stack/";
-			break;
-		case "Implementation":
-			url = "implementation/";
-			break;
-		case "Applications":
-			url = "stack-applications/";
-			break;
-		case "Practice Questions":
-			url = "practice";
-			break;
-		}
-		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/" + url;
-		if (url != Expectedurl) {
-			driver.navigate().to(Expectedurl);
-		}
-		currenturl = driver.getCurrentUrl();
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
-
+		stack.stackLinks(string);
 	}
 
 	@When("The user clicks {string} button in Operations in Stack page")
@@ -113,9 +76,7 @@ public class Stack_SD extends BasePageFactory {
 	public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
 		String currenturl = driver.getCurrentUrl();
 		String Expectedurl = "https://dsportalapp.herokuapp.com/tryEditor";
-		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-
 	}
 
 	@When("The user clicks {string} Implementation button")
@@ -127,7 +88,6 @@ public class Stack_SD extends BasePageFactory {
 	public void the_user_should_be_redirected_to_implementation_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/implementation/";
-		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
 	}
 
@@ -138,10 +98,7 @@ public class Stack_SD extends BasePageFactory {
 
 	@Given("The user is in the {string} page")
 	public void the_user_is_in_the_page(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/implementation/";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks {string} Applications button")
@@ -163,9 +120,7 @@ public class Stack_SD extends BasePageFactory {
 	public void the_user_should_be_redirected_to_practice_questions_page(String string) {
 		String currenturl = driver.getCurrentUrl();
 		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/practice";
-		Assertion assertion = new Assertion();
 		assertion.assertEquals(currenturl, Expectedurl);
-		String url = "https://dsportalapp.herokuapp.com/home";
-		driver.navigate().to(url);
+		base.navToHomePageUrl();
 	}
 }

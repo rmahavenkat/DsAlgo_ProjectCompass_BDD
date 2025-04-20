@@ -8,7 +8,6 @@ import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.LoggerReader;
 import java.io.ByteArrayInputStream;
-
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.BeforeAll;
@@ -29,31 +28,24 @@ public class hooks {
 		driverfactory.initdriver(browser);
 		LoggerReader.info("browser initialized");
 		LoggerReader.info("browser opened get driver");
-		driverfactory.getDriver().get(ConfigReader.getApplicationUrl());
+		driverfactory.getDriver().get(ConfigReader.getConfig("url"));
 	}
 
 	@AfterStep
 	public void afterstep(Scenario scenario) throws IOException {
-
 		if (scenario.isFailed()) {
-
 			LoggerReader.error("Steps Failed, Taking Screenshot");
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
 			final byte[] screenshot = screenshotTaker.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "My screenshot");
 			Allure.addAttachment("Myscreenshot", new ByteArrayInputStream(screenshot));
-			
+
 			// Extent reports or saving file
 			File screenshotFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
 			byte[] fileContent = FileUtils.readFileToByteArray(screenshotFile);
 			scenario.attach(fileContent, "image/png", "screenshot");
 		}
-	}
-	
-	@After
-	public void teardownScenario(Scenario scenario) {
-	    WebDriver driver = driverfactory.getDriver(); // Use ThreadLocal-safe getter
 	}
 
 	@AfterAll

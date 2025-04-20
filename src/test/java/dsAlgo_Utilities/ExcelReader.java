@@ -1,179 +1,69 @@
 package dsAlgo_Utilities;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+public class ExcelReader {
 
+	private static final String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
 
-	public class ExcelReader {
+	public static String getCellValue(String sheetName, int rowNum, int colNum) throws IOException {
+		try (FileInputStream fis = new FileInputStream(new File(path)); XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
 
-	
-
-	//Figure out reusable method and try to read from rowname to read whole row.
-	
-	//	public static String getCellValue(String SheetName) throws IOException { -> getCellValue("Register") or getCellValue("Login") 
-
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			if (sheet == null) {
+				throw new IllegalArgumentException("Sheet " + sheetName + " not found.");
+			}
+			Row row = sheet.getRow(rowNum);
+			if (row == null) {
+				throw new IllegalArgumentException("Row " + rowNum + " not found in sheet " + sheetName);
+			}
+			Cell cell = row.getCell(colNum);
+			if (cell == null) {
+				throw new IllegalArgumentException("Cell at column " + colNum + " not found in row " + rowNum);
+			}
+			return cell.toString(); // Handles different types (String, Numeric, Boolean)
+		}
+	}
 
 	public static String getusernameregister() throws IOException {
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet // XSSFSheet sheet = workbook.getSheet(SheetName);
-			Row newRow = sheet.getRow(1);// row we want to write
-			Cell newCell = newRow.getCell(0);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getusernameregister:" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Register", 1, 0);
 	}
 
 	public static String getpasswordregister() throws IOException {
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet
-			Row newRow = sheet.getRow(1);// row we want to write
-			Cell newCell = newRow.getCell(2);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getpasswordregister" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Register", 1, 1);
 	}
 
 	public static String getconfirmpasswordregister() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Register");// get in to sheet
-			Row newRow = sheet.getRow(1);// row we want to write
-			Cell newCell = newRow.getCell(2);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getconfirmpasswordregister" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Register", 1, 2);
 	}
 
 	public static String getvalidusername() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Login");// get in to sheet
-			Row newRow = sheet.getRow(1);// row we want to write
-			Cell newCell = newRow.getCell(0);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getvalidusername" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Login", 1, 0);
 	}
 
 	public static String getvalidpassword() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Login");// get in to sheet
-			Row newRow = sheet.getRow(1);// row we want to write
-			Cell newCell = newRow.getCell(1);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getvalidpassword" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Login", 1, 1);
 	}
 
 	public static String getinvalidusername() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Login");// get in to sheet
-			Row newRow = sheet.getRow(2);// row we want to write
-			Cell newCell = newRow.getCell(0);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getinvalidusername" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Login", 2, 0);
 	}
 
 	public static String getinvalidpassword() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("Login");// get in to sheet
-			Row newRow = sheet.getRow(2);// row we want to write
-			Cell newCell = newRow.getCell(1);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getinvalidpassword" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("Login", 2, 1);
 	}
 
 	public static String getvalidpythoncode() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("pythonCode");// get in to sheet
-			Row newRow = sheet.getRow(1);// row we want to write
-			Cell newCell = newRow.getCell(0);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getvalidpythoncode" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("pythonCode", 1, 0);
 	}
 
 	public static String getinvalidpythoncode() throws IOException {
-
-		String currentcell = null;
-		String path = System.getProperty("user.dir") + "/src/test/resources/Exceldata.xlsx";
-		File excelFile = new File(path);// give path of file
-		FileInputStream Fis = null;
-		Fis = new FileInputStream(excelFile);
-		try (XSSFWorkbook workbook = new XSSFWorkbook(Fis)) {
-			XSSFSheet sheet = workbook.getSheet("pythonCode");// get in to sheet
-			Row newRow = sheet.getRow(2);// row we want to write
-			Cell newCell = newRow.getCell(0);// in which we want to write
-			currentcell = newCell.getStringCellValue();
-			System.out.println("getinvalidpythoncode" + currentcell);
-		}
-		return currentcell;
+		return getCellValue("pythonCode", 2, 0);
 	}
-	}
-
+}

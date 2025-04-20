@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.asserts.Assertion;
 
 public class Stack_PF extends BasePageFactory {
 
@@ -46,16 +47,13 @@ public class Stack_PF extends BasePageFactory {
 		} catch (NoAlertPresentException e) {
 			System.out.println("Bug:user should be able to see an alert messge but showing No alert");
 		}
-
 	}
 
 	public void signin() {
 		signin.click();
-
 	}
 
 	public void setUserName(String uname) {
-
 		username.sendKeys(uname);
 	}
 
@@ -65,7 +63,6 @@ public class Stack_PF extends BasePageFactory {
 
 	public void login() {
 		login.click();
-
 	}
 
 	public void clickdata() {
@@ -97,7 +94,6 @@ public class Stack_PF extends BasePageFactory {
 	}
 
 	public void texteditor(String edit) throws InterruptedException {
-
 		editor.sendKeys(edit);
 	}
 
@@ -107,6 +103,32 @@ public class Stack_PF extends BasePageFactory {
 
 	public void getoutput() {
 		System.out.println(validoutputmsg.getText());
+	}
+
+	public void stackLinks(String string) {
+		String currenturl = driver.getCurrentUrl();
+		String url = "";
+		switch (string) {
+		case "Operations in Stack":
+			url = "operations-in-stack/";
+			break;
+		case "Implementation":
+			url = "implementation/";
+			break;
+		case "Applications":
+			url = "stack-applications/";
+			break;
+		case "Practice Questions":
+			url = "practice";
+			break;
+		}
+		String Expectedurl = "https://dsportalapp.herokuapp.com/stack/" + url;
+		if (url != Expectedurl) {
+			driver.navigate().to(Expectedurl);
+		}
+		currenturl = driver.getCurrentUrl();
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(currenturl, Expectedurl);
 	}
 
 }
