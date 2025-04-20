@@ -2,6 +2,7 @@ package ds_Algo_PageFactory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.asserts.Assertion;
 
 public class Tree_PF extends BasePageFactory {
 
@@ -94,6 +95,122 @@ public class Tree_PF extends BasePageFactory {
 
 	public void clickImplementationOfBST() {
 		implementationofbstbutton.click();
+	}
+
+	public void treeLinksUrl(String string) {
+		String currenturl = driver.getCurrentUrl();
+		String url = "";
+		switch (string) {
+		case "Overview of Trees":
+			url = "overview-of-trees/";
+			break;
+		case "Terminologies":
+			url = "terminologies/";
+			break;
+		case "Types of Trees":
+			url = "types-of-trees/";
+			break;
+		case "Tree Traversals":
+			url = "tree-traversals/";
+			break;
+		case "Traversals-Illustration":
+			url = "traversals-illustration/";
+			break;
+		case "Binary Trees":
+			url = "binary-trees/";
+			break;
+		case "Types of Binary Trees":
+			url = "types-of-binary-trees/";
+			break;
+		case "Implementation in python":
+			url = "implementation-in-python/";
+			break;
+		case "Binary Tree Traversals":
+			url = "binary-tree-traversals/";
+			break;
+		case "Implementation of Binary Trees":
+			url = "implementation-of-binary-trees/";
+			break;
+		case "Application of Binary Trees":
+			url = "applications-of-binary-trees/";
+			break;
+		case "Binary Search Trees":
+			url = "binary-search-trees/";
+			break;
+		case "Implementation of BST":
+			url = "implementation-of-bst/";
+			break;
+
+		case "Practice Questions":
+			url = "practice";
+			break;
+
+		}
+		String Expectedurl = "https://dsportalapp.herokuapp.com/tree/" + url;
+		if (!currenturl.equals(Expectedurl)) {
+			driver.navigate().to(Expectedurl);
+		}
+		currenturl = driver.getCurrentUrl();
+		System.out.println("The User is in the Tree page of :" + currenturl);
+	}
+
+	public void treeUrlIterate(String string) {
+		String currenturl = driver.getCurrentUrl();
+		String url = "";
+		switch (string) {
+		case "Overview of Trees":
+			url = "overview-of-trees/";
+			break;
+		case "Terminologies":
+			url = "terminologies/";
+			break;
+		case "Types of Trees":
+			url = "types-of-trees/";
+			break;
+		case "Tree Traversals":
+			url = "tree-traversals/";
+			break;
+		case "Traversals-Illustration":
+			url = "traversals-illustration/";
+			break;
+		case "Binary Trees":
+			url = "binary-trees/";
+			break;
+		case "Types of Binary Trees":
+			url = "types-of-binary-trees/";
+			break;
+		case "Implementation in Python":
+			url = "implementation-in-python/";
+			break;
+		case "Binary Tree Traversals":
+			url = "binary-tree-traversals/";
+			break;
+		case "Implementation of Binary Trees":
+			url = "implementation-of-binary-trees/";
+			break;
+		case "Applications of Binary trees":
+			url = "applications-of-binary-trees/";
+			break;
+		case "Binary Search Trees":
+			url = "binary-search-trees/";
+			break;
+		case "Implementation Of BST":
+			url = "implementation-of-bst/";
+			break;
+
+		case "Practice Questions":
+			url = "practice";
+			break;
+
+		}
+		String Expectedurl = "https://dsportalapp.herokuapp.com/tree/" + url;
+		if (!currenturl.equals(Expectedurl)) {
+			driver.navigate().to(Expectedurl);
+		}
+		currenturl = driver.getCurrentUrl();
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(currenturl, Expectedurl);
+
 	}
 
 }

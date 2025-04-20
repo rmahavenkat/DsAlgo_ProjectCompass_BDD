@@ -28,7 +28,7 @@ public class hooks {
 		driverfactory.initdriver(browser);
 		LoggerReader.info("browser initialized");
 		LoggerReader.info("browser opened get driver");
-		driverfactory.getDriver().get(ConfigReader.getApplicationUrl());
+		driverfactory.getDriver().get(ConfigReader.getConfig("url"));
 	}
 
 	@AfterStep

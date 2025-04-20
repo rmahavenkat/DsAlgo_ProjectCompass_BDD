@@ -7,18 +7,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-
 public class LinkedList_SD extends BasePageFactory {
-	
+
 	Assertion assertion = new Assertion();
 	public LinkedList_PF linkedlist = new LinkedList_PF();
+	BasePageFactory base = new BasePageFactory();
 
 	@Given("The user is in the Home page after logged in Linked List")
 	public void the_user_is_in_the_home_page_after_logged_in_linked_list() {
-		driver.navigate().to("https://dsportalapp.herokuapp.com/home");
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/home";
-		assertion.assertEquals(currenturl, expectedurl);
+		base.navToHomePageUrl();
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the {string} Getting Started button in Linked List panel OR The user select Linked List item from the drop down menu")
@@ -36,9 +34,7 @@ public class LinkedList_SD extends BasePageFactory {
 
 	@Given("The user is in the {string} page Sign in")
 	public void the_user_is_in_the_page_sign_in(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/linked-list/";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/linked-list/");
+		base.dsAlgoPageUrl();
 
 	}
 
@@ -55,7 +51,7 @@ public class LinkedList_SD extends BasePageFactory {
 
 	@Given("The user is in the {string}")
 	public void the_user_is_in_the(String string) {
-		linkedlist.urlIterate(string);
+		linkedlist.linkedListLinks(string);
 	}
 
 	@When("The user clicks the {string} Practice Questions button")
@@ -97,5 +93,5 @@ public class LinkedList_SD extends BasePageFactory {
 	public void the_user_clicks_deletion_button(String string) {
 		linkedlist.clickDeletionButton();
 	}
-	
+
 }

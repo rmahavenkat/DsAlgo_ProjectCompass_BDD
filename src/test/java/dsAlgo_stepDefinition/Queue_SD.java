@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Queue_SD extends BasePageFactory {
-	
+
 	public Queue_PF queue = new Queue_PF();
 
 	@When("The user clicks the {string} button in Queue Panel OR The user select Queue item from the drop down menu")

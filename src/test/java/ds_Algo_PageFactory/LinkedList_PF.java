@@ -109,4 +109,45 @@ public class LinkedList_PF extends BasePageFactory {
 		assertion.assertEquals(currenturl, Expectedurl);
 	}
 
+	public void linkedListLinks(String string) {
+		String currenturl = driver.getCurrentUrl();
+		System.out.println(currenturl);
+		String url = "";
+		switch (string) {
+		case "Introduction":
+			url = "introduction/";
+			break;
+		case "creating Linked List":
+			url = "creating-linked-list/";
+			break;
+		case "Types of Linked List":
+			url = "types-of-linked-list/";
+			break;
+		case "Implement Linked List in phyton":
+			url = "implement-linked-list-in-python/";
+			break;
+		case "Traversal":
+			url = "traversal/";
+			break;
+		case "Insertion":
+			url = "insertion-in-linked-list/";
+			break;
+		case "Deletion":
+			url = "deletion-in-linked-list/";
+			break;
+		case "Practice Questions":
+			url = "practice";
+			break;
+
+		}
+		System.out.println("before");
+		String Expectedurl = "https://dsportalapp.herokuapp.com/linked-list/" + url;
+
+		if (!currenturl.equals(Expectedurl)) {
+			driver.navigate().to(Expectedurl);
+		}
+		currenturl = driver.getCurrentUrl();
+		System.out.println("The user is in the Linked list page of :" + currenturl);
+	}
+
 }

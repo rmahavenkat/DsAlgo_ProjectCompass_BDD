@@ -100,4 +100,9 @@ public class Login_PF extends BasePageFactory {
 		return successLogoutMesssage.getText();
 	}
 
+	public void loginPageUrl() {
+		String currenturl = driver.getCurrentUrl();
+		System.out.println("user in login page " + currenturl);
+	}
+
 }

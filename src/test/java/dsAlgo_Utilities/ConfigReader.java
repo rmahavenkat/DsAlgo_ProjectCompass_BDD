@@ -29,14 +29,12 @@ public class ConfigReader {
 
 	}
 
-	// Get the url details from config properties file
-	// you have to write common method to read the config.properties file key.
-	public static String getApplicationUrl() { // public static String getApplication(Sting key)
-		String url = properties.getProperty("url");// String value = properties.getProperty(key);/
-		if (url != null)
-			return url;
+	public static String getConfig(String key) {
+		String value = properties.getProperty(key);
+		if (value != null)
+			return value;
 		else
-			throw new RuntimeException("url is not found in config.properties file.");
+			throw new RuntimeException("Key" + key + "not found in config.properties file.");
 
 	}
 
@@ -45,14 +43,11 @@ public class ConfigReader {
 	}
 
 	public static String getBrowserType() throws Throwable {
-		if (threadlocalbrowsertype.get() != null)
-		{
+		if (threadlocalbrowsertype.get() != null) {
 			return threadlocalbrowsertype.get();
-		} 
-		else 
-		{
+		} else {
 			throw new RuntimeException("browser is not specified in the testng.xml");
 		}
 	}
-	
+
 }

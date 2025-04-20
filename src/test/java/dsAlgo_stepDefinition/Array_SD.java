@@ -285,5 +285,5 @@ public class Array_SD extends BasePageFactory {
 		String url1 = "https://dsportalapp.herokuapp.com/home";
 		driver.navigate().to(url1);
 	}
-	
+
 }
