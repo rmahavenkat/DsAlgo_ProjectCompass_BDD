@@ -203,6 +203,7 @@ public class Array_SD extends BasePageFactory {
 	@Given("The user in the {string} page")
 	public void the_user_is_in_the_page(String string) {
 		base.navigateBack();
+		base.arrayInPythonNav();
 		base.dsAlgoPageUrl();
 	}
 	@Then("The user see success message for {string}")
