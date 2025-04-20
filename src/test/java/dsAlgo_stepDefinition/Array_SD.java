@@ -7,6 +7,7 @@ import ds_Algo_PageFactory.Array_PF;
 import ds_Algo_PageFactory.BasePageFactory;
 import io.cucumber.java.en.*;
 
+
 public class Array_SD extends BasePageFactory {
 
 	Array_PF array = new Array_PF();
@@ -201,7 +202,7 @@ public class Array_SD extends BasePageFactory {
 	}
 	@Given("The user in the {string} page")
 	public void the_user_is_in_the_page(String string) {
-		base.arrayInPythonNav();
+		base.navigateBack();
 		base.dsAlgoPageUrl();
 	}
 	@Then("The user see success message for {string}")
