@@ -6,9 +6,7 @@ import dsAlgo_DriverFactory.driverfactory;
 import dsAlgo_Utilities.ConfigReader;
 
 public class BasePageFactory {
-
 	protected WebDriver driver = driverfactory.getDriver();
-
 	public BasePageFactory() {
 		PageFactory.initElements(driver, this);
 	}

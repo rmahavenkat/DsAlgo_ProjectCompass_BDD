@@ -28,7 +28,9 @@ public class ExcelReader {
 			if (cell == null) {
 				throw new IllegalArgumentException("Cell at column " + colNum + " not found in row " + rowNum);
 			}
+
 			return cell.toString(); // Handles different types (String, Numeric, Boolean)
+
 		}
 	}
 

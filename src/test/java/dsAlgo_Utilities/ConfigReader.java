@@ -29,6 +29,7 @@ public class ConfigReader {
 
 	}
 
+
 	public static String getConfig(String key) {
 		String value = properties.getProperty(key);
 		if (value != null)

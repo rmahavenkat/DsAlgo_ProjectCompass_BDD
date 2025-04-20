@@ -33,11 +33,7 @@ public class Home_SD extends BasePageFactory {
 
 	@Given("The user is on the DS Algo Portal")
 	public void the_user_is_on_the_ds_algo_portal() {
-		String currenturl = driver.getCurrentUrl();
-		// String Expectedurl = "https://dsportalapp.herokuapp.com/";
-		// Assertion assertion = new Assertion();
-		// assertion.assertEquals(currenturl, Expectedurl);
-		System.out.println("The user is on the DS Algo Portal" + currenturl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the {string} button")
@@ -56,10 +52,7 @@ public class Home_SD extends BasePageFactory {
 
 	@Given("The user is on the Home page")
 	public void the_user_is_on_the_home_page() {
-		String appurl = driver.getCurrentUrl();
-		String homeurl = "https://dsportalapp.herokuapp.com/home";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(homeurl, appurl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the Data Structures dropdown")

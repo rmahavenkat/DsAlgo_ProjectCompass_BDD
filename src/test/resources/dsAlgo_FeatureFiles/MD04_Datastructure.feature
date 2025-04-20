@@ -3,8 +3,6 @@ Feature: Testing whether the user is navigating to DataStructures Page and perfo
 
   Background: 
             The user sign in to dsAlgo Portal
-
-
   @TC33
   Scenario: Verify that user is able to navigate to "Data Structures - Introduction" page
     Given The user is in the Home page after logged in

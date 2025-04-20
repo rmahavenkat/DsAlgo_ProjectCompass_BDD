@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:" }, // reporting purpose
 		dryRun = false, monochrome = true, // console output color
-		// tags = "@HomeScenario", // tags from feature file
+	//	 tags = "", // tags from feature file
 		features = { "src/test/resources/dsAlgo_FeatureFiles" }, // location of feature files
 		glue = { "dsAlgo_stepDefinition" }) // location of step definition files
 
@@ -31,9 +31,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	@Override
 	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
-
 		return super.scenarios();
-
 	}
 
 }
