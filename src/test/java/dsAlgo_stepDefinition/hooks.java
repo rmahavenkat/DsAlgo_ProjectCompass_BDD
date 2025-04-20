@@ -28,14 +28,12 @@ public class hooks {
 		driverfactory.initdriver(browser);
 		LoggerReader.info("browser initialized");
 		LoggerReader.info("browser opened get driver");
-		driverfactory.getDriver().get(ConfigReader.getApplicationUrl());
+		driverfactory.getDriver().get(ConfigReader.getConfig("url"));
 	}
 
 	@AfterStep
 	public void afterstep(Scenario scenario) throws IOException {
-
 		if (scenario.isFailed()) {
-
 			LoggerReader.error("Steps Failed, Taking Screenshot");
 			// For allure reports
 			TakesScreenshot screenshotTaker = (TakesScreenshot) driverfactory.getDriver();
