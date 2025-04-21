@@ -98,4 +98,5 @@ public class Queue_PF extends BasePageFactory {
 	public void getoutput() {
 		System.out.println(validoutputmsg.getText());
 	}
+	
 }

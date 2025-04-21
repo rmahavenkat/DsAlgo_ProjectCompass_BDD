@@ -81,10 +81,10 @@ public class Home_SD extends BasePageFactory {
 	@Then("The user should able to see an warning message {string}")
 	public void the_user_should_able_to_see_an_warning_message(String string) {
 		Home.warning_msg();
+		
 	}
+	
+	
 
-	@When("The user clicks {string} buttons of {string} on the homepage without Sign in")
-	public void the_user_clicks_buttons_of_on_the_homepage_without_sign_in(String string, String string2) {
-
-	}
+	
 }
