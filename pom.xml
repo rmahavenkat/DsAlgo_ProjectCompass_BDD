@@ -5,7 +5,7 @@
 	<groupId>DsAlgo_ProjectCompass_BDD</groupId>
 	<artifactId>DSALgo_ProjectCompass_BDD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 
 	<dependencies>
 
@@ -110,8 +110,6 @@
 		</dependency>
 
 
-
-
 		<dependency>
 
 			<groupId>io.github.bonigarcia</groupId>
@@ -140,5 +138,5 @@
 
 	</dependencies>
 
-	 </project>
+</project>
 
