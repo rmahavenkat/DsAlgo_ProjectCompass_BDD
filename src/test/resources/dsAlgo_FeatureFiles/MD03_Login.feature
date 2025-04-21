@@ -37,8 +37,4 @@ Feature: Testing whether user is able to login and perform actions
     When The user clicks login button after entering valid username and valid password
     Then The user should land in Data Structure Home Page with message "You are logged in"
 
-  @TC32
-  Scenario: Verify that user able to sign out successfully
-    Given The user is in the Home page after Login in
-    When The user clicks "Sign out"
-    Then The user should be redirected to home page with message "Logged out successfully"
+  

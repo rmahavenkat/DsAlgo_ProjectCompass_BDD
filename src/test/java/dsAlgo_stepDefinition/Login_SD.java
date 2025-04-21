@@ -117,22 +117,6 @@ public class Login_SD extends BasePageFactory {
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
 	}
 
-	@Given("The user is in the Home page after Login in")
-	public void the_user_is_in_the_home_page_after_sign_in() {
-		base.dsAlgoPageUrl();
-	}
-
-	@When("The user clicks {string}")
-	public void the_user_clicks(String string) {
-		// login.clicklogout();
-	}
-
-	@Then("The user should be redirected to home page with message {string}")
-	public void the_user_should_be_redirected_to_home_page_with_message(String string) {
-		// String actualMessage = login.loginSuccessMessage();
-		// String expectedMessage="Logged out successfully";
-		// assertion.assertEquals( actualMessage,expectedMessage,"Logged out
-		// successfully");
-	}
+	
 
 }

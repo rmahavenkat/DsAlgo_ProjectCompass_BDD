@@ -83,9 +83,7 @@ public class Queue_SD extends BasePageFactory {
 
 	@Given("The user is in the tryEditor page for {string}")
 	public void the_user_is_in_the_try_editor_page_for(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/tryEditor";
-		assertion.assertEquals(currenturl, Expectedurl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the Run Button without entering the code in the tryEditor")

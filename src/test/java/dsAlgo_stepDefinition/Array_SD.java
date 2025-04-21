@@ -30,32 +30,7 @@ public class Array_SD extends BasePageFactory {
 	}
 	@Then("The user should be redirected to {string} array page")
 	public void the_user_should_be_redirected_to_page(String string) {
-		String currenturl = driver.getCurrentUrl();
-		String url = "";
-		switch (string) {
-		case "Arrays in Python":
-			url = "arrays-in-python/";
-			break;
-		case "Arrays using list":
-			url = "arrays-using-list/";
-			break;
-		case "Basic operations in lists":
-			url = "basic-operations-in-lists/";
-			break;
-		case "Applications of array":
-			url = "applications-of-array/";
-			break;
-		case "Practice":
-			url = "practice";
-			break;
-		}
-		String Expectedurl = "https://dsportalapp.herokuapp.com/array/" + url;
-		if (url != Expectedurl) {
-			driver.navigate().to(Expectedurl);
-		}
-		currenturl = driver.getCurrentUrl();
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl); 
+		array.arrayPageurl(string);	 
 	}
 	@Given("The user is on the {string} array page")
 	public void the_user_is_on_the_page(String string) {
