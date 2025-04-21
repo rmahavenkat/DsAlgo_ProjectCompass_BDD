@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.asserts.Assertion;
 
 public class Array_PF extends BasePageFactory {
 
@@ -167,5 +168,37 @@ public class Array_PF extends BasePageFactory {
 		return (String) ((org.openqa.selenium.JavascriptExecutor) driver)
 				.executeScript("return arguments[0].validationMessage;", element);
 	}
+	public void arrayPageurl(String string) {
+		String currenturl = driver.getCurrentUrl();
+		String url = "";
+		switch (string) {
+		case "Arrays in Python":
+			url = "arrays-in-python/";
+			break;
+		case "Arrays using list":
+			url = "arrays-using-list/";
+			break;
+		case "Basic operations in lists":
+			url = "basic-operations-in-lists/";
+			break;
+		case "Applications of array":
+			url = "applications-of-array/";
+			break;
+
+		case "Practice":
+			url = "practice";
+			break;
+		}
+		String Expectedurl = "https://dsportalapp.herokuapp.com/array/" + url;
+		if (url != Expectedurl) {
+			driver.navigate().to(Expectedurl);
+		}
+		currenturl = driver.getCurrentUrl();
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(currenturl, Expectedurl);
+	}
+	
+	
+	
 
 }

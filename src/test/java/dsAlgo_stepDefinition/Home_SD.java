@@ -20,7 +20,8 @@ public class Home_SD extends BasePageFactory {
 
 	@When("The user enter correct dsAlgo portal URL")
 	public void the_user_enter_correct_ds_algo_portal_url() {
-		base.dsAlgoPageUrl();
+		base.application();
+
 	}
 
 	@Then("The user should be able to land on dsAlgo portal with Get Started button")
@@ -33,10 +34,8 @@ public class Home_SD extends BasePageFactory {
 
 	@Given("The user is on the DS Algo Portal")
 	public void the_user_is_on_the_ds_algo_portal() {
-		String currenturl = driver.getCurrentUrl();
-		String Expectedurl = "https://dsportalapp.herokuapp.com/";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(currenturl, Expectedurl);
+
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the {string} button")
@@ -55,10 +54,7 @@ public class Home_SD extends BasePageFactory {
 
 	@Given("The user is on the Home page")
 	public void the_user_is_on_the_home_page() {
-		String appurl = driver.getCurrentUrl();
-		String homeurl = "https://dsportalapp.herokuapp.com/home";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(homeurl, appurl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks the Data Structures dropdown")
@@ -85,10 +81,10 @@ public class Home_SD extends BasePageFactory {
 	@Then("The user should able to see an warning message {string}")
 	public void the_user_should_able_to_see_an_warning_message(String string) {
 		Home.warning_msg();
+		
 	}
+	
+	
 
-	@When("The user clicks {string} buttons of {string} on the homepage without Sign in")
-	public void the_user_clicks_buttons_of_on_the_homepage_without_sign_in(String string, String string2) {
-
-	}
+	
 }

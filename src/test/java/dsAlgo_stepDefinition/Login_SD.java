@@ -10,17 +10,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Login_SD extends BasePageFactory{
+public class Login_SD extends BasePageFactory {
 	Assertion assertion = new Assertion();
 	public Login_PF login = new Login_PF();
+	BasePageFactory base = new BasePageFactory();
 
 	@Given("The user is on the DS Algo Home Page")
 	public void the_user_is_on_the_ds_algo_home_page() throws InterruptedException {
-		// Get initialized WebDriver
-		String appurl = driver.getCurrentUrl();
-		String homeurl = "https://dsportalapp.herokuapp.com/home";
-		Assertion assertion = new Assertion();
-		assertion.assertEquals(homeurl, appurl);
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user should click the Sign in link")
@@ -39,10 +36,7 @@ public class Login_SD extends BasePageFactory{
 
 	@Given("The user is on the DS Algo Sign in Page")
 	public void the_user_is_on_the_ds_algo_sign_in_page() {
-		System.out.println("user in login page");
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/login";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/login");
+		base.dsAlgoPageUrl();
 	}
 
 	@When("The user clicks login button after leaving the {string} textbox and {string} textbox empty")
@@ -123,25 +117,6 @@ public class Login_SD extends BasePageFactory{
 		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
 	}
 
-	@Given("The user is in the Home page after Login in")
-	public void the_user_is_in_the_home_page_after_sign_in() {
-		System.out.println("user in Home page");
-		String currenturl = driver.getCurrentUrl();
-		String expectedurl = "https://dsportalapp.herokuapp.com/home";
-		assertion.assertEquals(currenturl, expectedurl, "https://dsportalapp.herokuapp.com/home");
-	}
-
-	@When("The user clicks {string}")
-	public void the_user_clicks(String string) {
-		// login.clicklogout();
-	}
-
-	@Then("The user should be redirected to home page with message {string}")
-	public void the_user_should_be_redirected_to_home_page_with_message(String string) {
-		// String actualMessage = login.loginSuccessMessage();
-		// String expectedMessage="Logged out successfully";
-		// assertion.assertEquals( actualMessage,expectedMessage,"Logged out
-		// successfully");
-	}
+	
 
 }

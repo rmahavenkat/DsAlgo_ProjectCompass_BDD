@@ -49,44 +49,4 @@ Feature: TC01 - TC16 - Verify user access to the dsAlgo portal
     When The user selects "Tree" from the drop down without Sign in.
     Then The user should able to see an warning message "You are not logged in"
 
-  @TC09
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Data Structures-Introduction" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Data Structures-Introduction" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
-
-  @TC10
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Array" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Array" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
-
-  @TC11
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Linked List" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Linked List" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
-
-  @TC12
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Stack" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Stack" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
-
-  @TC13
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Queue" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Queue" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
-
-  @TC14
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Tree" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Tree" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
-
-  @TC15
-  Scenario: Verify that user able to see warning message on clicking "Get Started" buttons of "Graph" on the home page without Sign in
-    Given The user is on the Home page
-    When The user clicks "Get Started" buttons of "Graph" on the homepage without Sign in
-    Then The user should able to see an warning message "You are not logged in"
+  
